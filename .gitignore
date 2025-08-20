@@ -1,0 +1,37 @@
+# NetBeans specific files
+
+nbproject/
+build/
+dist/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+ 
+# Compiled class files
+*.class
+
+# Log files
+*.log
+ 
+# OS generated files
+.DS_Store
+Thumbs.db
+ 
+# Maven/Gradle
+target/
+out/
+
+# IDE settings
+*.iml
+.idea/
+.vscode/
+ 
+# User-specific files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.pdf
+*.lck
+
