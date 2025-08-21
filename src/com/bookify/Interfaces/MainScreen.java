@@ -2,9 +2,9 @@ package com.bookify.Interfaces;
 
 import com.bookify.Constant.ThemeColors;
 import com.bookify.CustomRenderComponent.RoundedBorder;
-import com.bookify.Interfaces.Panels.Dashboard.Dashboard;
 import com.bookify.Interfaces.Panels.ManageGuests.ManageGuest;
 import com.bookify.Interfaces.Panels.Reservation.Reservation;
+import com.bookify.Interfaces.panels.Dashboard.Dashboard;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
