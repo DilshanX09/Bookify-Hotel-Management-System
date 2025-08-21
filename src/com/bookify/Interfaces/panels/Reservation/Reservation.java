@@ -1,9 +1,10 @@
 package com.bookify.Interfaces.Panels.Reservation;
 
 import com.bookify.Constant.ThemeColors;
+import com.bookify.CustomRenderComponent.RoundedBorder;
 import com.bookify.CustomRenderComponent.CustomTableHeader;
 import com.formdev.flatlaf.FlatClientProperties;
-import javax.swing.ImageIcon;
+import java.awt.Color;
 
 public final class Reservation extends javax.swing.JPanel {
 
@@ -13,14 +14,14 @@ public final class Reservation extends javax.swing.JPanel {
     }
 
     public void init() {
-        homeIcon.setText("");
-        homeIcon.setIcon(new ImageIcon(getClass().getResource("/bookify/Resources/Icons/Home.svg")));
         ReserveBookingBtn.putClientProperty(FlatClientProperties.STYLE, "arc:10");
-        jPanel2.putClientProperty(FlatClientProperties.STYLE, "arc:10");
-        jPanel3.putClientProperty(FlatClientProperties.STYLE, "arc:10");
-        jPanel4.putClientProperty(FlatClientProperties.STYLE, "arc:10");
-        jPanel5.putClientProperty(FlatClientProperties.STYLE, "arc:10");
 
+        RoundedBorder.applyToPanel(jPanel2, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
+        RoundedBorder.applyToPanel(jPanel3, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
+        RoundedBorder.applyToPanel(jPanel4, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
+        RoundedBorder.applyToPanel(jPanel5, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
+
+        reservationTable.getTableHeader().setBackground(ThemeColors.WHITE);
         new CustomTableHeader(reservationTable.getTableHeader()).initHeader();
     }
 
