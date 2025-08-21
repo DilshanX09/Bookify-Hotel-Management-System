@@ -70,6 +70,7 @@ public final class Reservation extends javax.swing.JPanel {
         homeIcon.setOpaque(true);
 
         jLabel3.setFont(new java.awt.Font("Inter 18pt", 1, 26)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Reservations");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -79,14 +80,17 @@ public final class Reservation extends javax.swing.JPanel {
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel4.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Total Reservation Today");
 
         jLabel5.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("<html> Bookings created in the <br/> system during the last 24 hours. </html>");
         jLabel5.setToolTipText("");
 
         todayReservationsLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
+        todayReservationsLabel.setForeground(new java.awt.Color(0, 0, 0));
         todayReservationsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         todayReservationsLabel.setText("30");
 
@@ -126,14 +130,17 @@ public final class Reservation extends javax.swing.JPanel {
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel7.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel7.setText("<html>\nNumber of guests currently <br/>\n staying in the hotel.\n</html>");
         jLabel7.setToolTipText("");
 
         jLabel8.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Active Check-ins");
 
         checkInLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
+        checkInLabel.setForeground(new java.awt.Color(0, 0, 0));
         checkInLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkInLabel.setText("30");
 
@@ -172,14 +179,17 @@ public final class Reservation extends javax.swing.JPanel {
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel10.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel10.setText("<html>\nGuests expected to depart today<br/>\nbut are still marked as active in the<br/>\nsystem. \n</html>");
         jLabel10.setToolTipText("");
 
         jLabel11.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Pending Check-outs");
 
         checkOutLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
+        checkOutLabel.setForeground(new java.awt.Color(0, 0, 0));
         checkOutLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOutLabel.setText("30");
 
@@ -218,11 +228,13 @@ public final class Reservation extends javax.swing.JPanel {
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel13.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel13.setText("<html>\nBookings that were cancelled today</br>\nbefore guest check-in.\n</html>");
         jLabel13.setToolTipText("");
 
         jLabel14.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Cancellation Today");
 
         cancelLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
@@ -327,7 +339,7 @@ public final class Reservation extends javax.swing.JPanel {
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(ReserveBookingBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1238, Short.MAX_VALUE)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)

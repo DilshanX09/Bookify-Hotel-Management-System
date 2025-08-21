@@ -1,4 +1,4 @@
-package com.bookify.Interfaces.Panels.ManageGuests;
+package com.bookify.Interfaces.panels.ManageStaff;
 
 import com.bookify.CustomRenderComponent.CustomTableHeader;
 import com.bookify.CustomRenderComponent.RoundedBorder;
@@ -6,15 +6,13 @@ import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
 import java.awt.Color;
 
-public class ManageGuest extends javax.swing.JPanel {
+public class ManageStaff extends javax.swing.JPanel {
 
-    public ManageGuest() {
+    public ManageStaff() {
         initComponents();
-        init();
     }
 
     private void init() {
-
         homeIcon.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Home.svg", homeIcon.getWidth(), homeIcon.getHeight()));
 
         RoundedBorder.applyToPanel(totalGuests, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
@@ -27,7 +25,7 @@ public class ManageGuest extends javax.swing.JPanel {
         jButton4.putClientProperty(FlatClientProperties.STYLE, "arc:10");
         jButton5.putClientProperty(FlatClientProperties.STYLE, "arc:10");
 
-        new CustomTableHeader(guestTabel.getTableHeader()).initHeader();
+        new CustomTableHeader(staffTabel.getTableHeader()).initHeader();
     }
 
     @SuppressWarnings("unchecked")
@@ -41,25 +39,26 @@ public class ManageGuest extends javax.swing.JPanel {
         totalGuests = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        totalGuestLabel = new javax.swing.JLabel();
+        totalStaffLabel = new javax.swing.JLabel();
         currentlyCheckIns = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        checkInLabel = new javax.swing.JLabel();
+        activeStaffLabel = new javax.swing.JLabel();
         upcomingCheckouts = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        checkOutLabel = new javax.swing.JLabel();
+        onLeaveLabel = new javax.swing.JLabel();
         checkOutToday = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        checkOutTodayLabel = new javax.swing.JLabel();
+        cleanersLabel = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        guestTabel = new javax.swing.JTable();
+        staffTabel = new javax.swing.JTable();
+        registerMemberBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -70,11 +69,11 @@ public class ManageGuest extends javax.swing.JPanel {
         jLabel2.setBackground(new java.awt.Color(100, 100, 100));
         jLabel2.setFont(new java.awt.Font("Inter 18pt Medium", 0, 13)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("/  Guest Management");
+        jLabel2.setText("/  Staff Management");
 
         jLabel3.setFont(new java.awt.Font("Inter 18pt", 1, 26)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Guest Management");
+        jLabel3.setText("Staff Management");
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new java.awt.GridLayout(1, 1, 5, 5));
@@ -84,18 +83,18 @@ public class ManageGuest extends javax.swing.JPanel {
 
         jLabel4.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Total Guests");
+        jLabel4.setText("Total Staff");
 
         jLabel5.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel5.setText("<html>\nCumulative count of all guests who<br/>\nhave stayed or booked.\n</html>");
+        jLabel5.setText("<html>\nComplete count of all staff<br/>\ncurrently in the system.\n</html>");
         jLabel5.setToolTipText("");
 
-        totalGuestLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
-        totalGuestLabel.setForeground(new java.awt.Color(0, 0, 0));
-        totalGuestLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        totalGuestLabel.setText("30");
+        totalStaffLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
+        totalStaffLabel.setForeground(new java.awt.Color(0, 0, 0));
+        totalStaffLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        totalStaffLabel.setText("30");
 
         javax.swing.GroupLayout totalGuestsLayout = new javax.swing.GroupLayout(totalGuests);
         totalGuests.setLayout(totalGuestsLayout);
@@ -106,10 +105,10 @@ public class ManageGuest extends javax.swing.JPanel {
                 .addGroup(totalGuestsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addGroup(totalGuestsLayout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
                         .addGap(120, 120, 120)))
                 .addGap(18, 18, 18)
-                .addComponent(totalGuestLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(totalStaffLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
         totalGuestsLayout.setVerticalGroup(
@@ -118,7 +117,7 @@ public class ManageGuest extends javax.swing.JPanel {
                 .addGap(12, 12, 12)
                 .addGroup(totalGuestsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(totalGuestsLayout.createSequentialGroup()
-                        .addComponent(totalGuestLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(totalStaffLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(24, Short.MAX_VALUE))
                     .addGroup(totalGuestsLayout.createSequentialGroup()
                         .addComponent(jLabel4)
@@ -135,17 +134,17 @@ public class ManageGuest extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel7.setText("<html>\nNumber of guests currently <br/>\n staying in the hotel.\n</html>");
+        jLabel7.setText("<html>\nStaff members currently marked as<br/>\nactive and available.\n</html>");
         jLabel7.setToolTipText("");
 
         jLabel8.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("Currently Check-ins");
+        jLabel8.setText("Active Staff");
 
-        checkInLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
-        checkInLabel.setForeground(new java.awt.Color(0, 0, 0));
-        checkInLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        checkInLabel.setText("30");
+        activeStaffLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
+        activeStaffLabel.setForeground(new java.awt.Color(0, 0, 0));
+        activeStaffLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        activeStaffLabel.setText("30");
 
         javax.swing.GroupLayout currentlyCheckInsLayout = new javax.swing.GroupLayout(currentlyCheckIns);
         currentlyCheckIns.setLayout(currentlyCheckInsLayout);
@@ -156,10 +155,10 @@ public class ManageGuest extends javax.swing.JPanel {
                 .addGroup(currentlyCheckInsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
                     .addGroup(currentlyCheckInsLayout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
                         .addGap(72, 72, 72)))
                 .addGap(18, 18, 18)
-                .addComponent(checkInLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(activeStaffLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
         currentlyCheckInsLayout.setVerticalGroup(
@@ -167,11 +166,11 @@ public class ManageGuest extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, currentlyCheckInsLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addGroup(currentlyCheckInsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(checkInLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(activeStaffLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, currentlyCheckInsLayout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7)))
+                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)))
                 .addGap(12, 12, 12))
         );
 
@@ -183,17 +182,17 @@ public class ManageGuest extends javax.swing.JPanel {
         jLabel10.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel10.setText("<html>\nGuests presently checked into their<br/>\nrooms.\n</html>");
+        jLabel10.setText("<html>\nStaff currently not reporting for<br/>\nduty due to approved leave.\n</html>");
         jLabel10.setToolTipText("");
 
         jLabel11.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel11.setText("Upcoming Check-outs");
+        jLabel11.setText("On Leave");
 
-        checkOutLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
-        checkOutLabel.setForeground(new java.awt.Color(0, 0, 0));
-        checkOutLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        checkOutLabel.setText("30");
+        onLeaveLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
+        onLeaveLabel.setForeground(new java.awt.Color(0, 0, 0));
+        onLeaveLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        onLeaveLabel.setText("30");
 
         javax.swing.GroupLayout upcomingCheckoutsLayout = new javax.swing.GroupLayout(upcomingCheckouts);
         upcomingCheckouts.setLayout(upcomingCheckoutsLayout);
@@ -207,7 +206,7 @@ public class ManageGuest extends javax.swing.JPanel {
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(checkOutLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(onLeaveLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
         upcomingCheckoutsLayout.setVerticalGroup(
@@ -219,7 +218,7 @@ public class ManageGuest extends javax.swing.JPanel {
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(checkOutLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(onLeaveLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12))
         );
 
@@ -231,17 +230,17 @@ public class ManageGuest extends javax.swing.JPanel {
         jLabel13.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel13.setText("<html> Guests who departed the hotel<br/> today. </html>");
+        jLabel13.setText("<html>\nCleaners currently marked as on<br/>\nduty and available.. \n</html>");
         jLabel13.setToolTipText("");
 
         jLabel14.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel14.setText("Check-out Today");
+        jLabel14.setText("Cleaners On Duty");
 
-        checkOutTodayLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
-        checkOutTodayLabel.setForeground(new java.awt.Color(0, 0, 0));
-        checkOutTodayLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        checkOutTodayLabel.setText("30");
+        cleanersLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
+        cleanersLabel.setForeground(new java.awt.Color(0, 0, 0));
+        cleanersLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cleanersLabel.setText("30");
 
         javax.swing.GroupLayout checkOutTodayLayout = new javax.swing.GroupLayout(checkOutToday);
         checkOutToday.setLayout(checkOutTodayLayout);
@@ -251,12 +250,12 @@ public class ManageGuest extends javax.swing.JPanel {
                 .addGap(12, 12, 12)
                 .addGroup(checkOutTodayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(checkOutTodayLayout.createSequentialGroup()
-                        .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                         .addGap(102, 102, 102))
                     .addGroup(checkOutTodayLayout.createSequentialGroup()
                         .addComponent(jLabel13)
                         .addGap(26, 26, 26)))
-                .addComponent(checkOutTodayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cleanersLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
         checkOutTodayLayout.setVerticalGroup(
@@ -264,11 +263,11 @@ public class ManageGuest extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, checkOutTodayLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addGroup(checkOutTodayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(checkOutTodayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cleanersLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, checkOutTodayLayout.createSequentialGroup()
                         .addComponent(jLabel14)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel13)))
+                        .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)))
                 .addGap(12, 12, 12))
         );
 
@@ -294,33 +293,41 @@ public class ManageGuest extends javax.swing.JPanel {
         jScrollPane1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(237, 237, 237), 1, true));
         jScrollPane1.setForeground(new java.awt.Color(0, 0, 0));
 
-        guestTabel.setBackground(new java.awt.Color(255, 255, 255));
-        guestTabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
-        guestTabel.setFont(new java.awt.Font("Inter 18pt", 0, 13)); // NOI18N
-        guestTabel.setForeground(new java.awt.Color(0, 0, 0));
-        guestTabel.setModel(new javax.swing.table.DefaultTableModel(
+        staffTabel.setBackground(new java.awt.Color(255, 255, 255));
+        staffTabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
+        staffTabel.setFont(new java.awt.Font("Inter 18pt", 0, 13)); // NOI18N
+        staffTabel.setForeground(new java.awt.Color(0, 0, 0));
+        staffTabel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Guset ID", "Full Name", "Mobiel", "Email", "Check-in Date", "Check-out Date", "Room Number", "Booking Status", "Payment Status", "Action"
+                "Staff ID", "Full Name", "Role", "Contact", "Email Address", "Joined Date", "Status", "Arrival Schedule", "Action"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
-        guestTabel.setRowHeight(6);
-        guestTabel.setSelectionBackground(new java.awt.Color(0, 0, 0));
-        guestTabel.setSelectionForeground(new java.awt.Color(255, 255, 255));
-        jScrollPane1.setViewportView(guestTabel);
+        staffTabel.setRowHeight(6);
+        staffTabel.setSelectionBackground(new java.awt.Color(0, 0, 0));
+        staffTabel.setSelectionForeground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setViewportView(staffTabel);
+
+        registerMemberBtn.setBackground(new java.awt.Color(0, 0, 0));
+        registerMemberBtn.setFont(new java.awt.Font("Inter 18pt Medium", 0, 13)); // NOI18N
+        registerMemberBtn.setForeground(new java.awt.Color(255, 255, 255));
+        registerMemberBtn.setText("Register Member");
+        registerMemberBtn.setMaximumSize(new java.awt.Dimension(135, 24));
+        registerMemberBtn.setMinimumSize(new java.awt.Dimension(135, 24));
+        registerMemberBtn.setPreferredSize(new java.awt.Dimension(135, 24));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -329,25 +336,25 @@ public class ManageGuest extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(582, 582, 582)
-                        .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1227, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(homeIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
                             .addComponent(jLabel3)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(homeIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel2)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(20, 20, 20))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(registerMemberBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -355,15 +362,21 @@ public class ManageGuest extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(17, 17, 17)
-                        .addComponent(homeIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jLabel2)))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addGap(20, 20, 20)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(homeIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(22, 22, 22)
+                                .addComponent(jLabel3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(jLabel2)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(registerMemberBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -373,19 +386,16 @@ public class ManageGuest extends javax.swing.JPanel {
                             .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
-                .addGap(15, 15, 15))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel checkInLabel;
-    private javax.swing.JLabel checkOutLabel;
+    private javax.swing.JLabel activeStaffLabel;
     private javax.swing.JPanel checkOutToday;
-    private javax.swing.JLabel checkOutTodayLabel;
+    private javax.swing.JLabel cleanersLabel;
     private javax.swing.JPanel currentlyCheckIns;
-    private javax.swing.JTable guestTabel;
     private javax.swing.JLabel homeIcon;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -403,8 +413,11 @@ public class ManageGuest extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel totalGuestLabel;
+    private javax.swing.JLabel onLeaveLabel;
+    private javax.swing.JButton registerMemberBtn;
+    private javax.swing.JTable staffTabel;
     private javax.swing.JPanel totalGuests;
+    private javax.swing.JLabel totalStaffLabel;
     private javax.swing.JPanel upcomingCheckouts;
     // End of variables declaration//GEN-END:variables
 }
