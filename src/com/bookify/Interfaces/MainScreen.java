@@ -6,6 +6,7 @@ import com.bookify.Interfaces.Panels.ManageGuests.ManageGuest;
 import com.bookify.Interfaces.Panels.Reservation.Reservation;
 import com.bookify.Interfaces.panels.Dashboard.Dashboard;
 import com.bookify.Interfaces.panels.ManageStaff.ManageStaff;
+import com.bookify.Interfaces.panels.RoomOperation.RoomOperation;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
@@ -35,6 +36,7 @@ public class MainScreen extends javax.swing.JFrame {
     private Reservation reservation;
     private ManageGuest manageGuest;
     private ManageStaff manageStaff;
+    private RoomOperation roomOperation;
 
     public MainScreen() {
         initComponents();
@@ -52,15 +54,20 @@ public class MainScreen extends javax.swing.JFrame {
         this.reservation = new Reservation();
         this.manageGuest = new ManageGuest();
         this.manageStaff = new ManageStaff();
+        this.roomOperation = new RoomOperation();
 
-        RoundedBorder.applyToPanel(dashboard, 20, 1, Color.decode("#D9D9D9"), Color.WHITE);
-        RoundedBorder.applyToPanel(reservation, 20, 1, Color.decode("#D9D9D9"), Color.WHITE);
-        RoundedBorder.applyToPanel(manageGuest, 20, 1, Color.decode("#D9D9D9"), Color.WHITE);
+        RoundedBorder.applyLineBorder(dashboard, 20);
+        RoundedBorder.applyLineBorder(reservation, 20);
+        RoundedBorder.applyLineBorder(manageGuest, 20);
+        RoundedBorder.applyLineBorder(manageStaff, 20);
+        RoundedBorder.applyLineBorder(roomOperation, 20);
+        RoundedBorder.applyToPanel(mainPanel, 20, 1, Color.decode("#EDEDED"), Color.WHITE);
 
         this.mainPanel.add(dashboard, "dashboard");
         this.mainPanel.add(reservation, "reservation");
         this.mainPanel.add(manageGuest, "manageGuest");
         this.mainPanel.add(manageStaff, "manageStaff");
+        this.mainPanel.add(roomOperation, "roomOperation");
 
         SwingUtilities.updateComponentTreeUI(mainPanel);
     }
@@ -184,7 +191,7 @@ public class MainScreen extends javax.swing.JFrame {
             }
         });
 
-        mainPanel.setBackground(new java.awt.Color(247, 247, 247));
+        mainPanel.setBackground(new java.awt.Color(255, 255, 255));
         mainPanel.setLayout(new java.awt.CardLayout());
 
         mainLogo.setBackground(new java.awt.Color(255, 255, 255));
@@ -320,7 +327,7 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_reservationBtnActionPerformed
 
     private void roomOperationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roomOperationBtnActionPerformed
-
+        cardLayout.show(mainPanel, "roomOperation");
     }//GEN-LAST:event_roomOperationBtnActionPerformed
 
     private void manageStaffBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageStaffBtnActionPerformed
