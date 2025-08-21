@@ -1,6 +1,7 @@
 package com.bookify.Interfaces.Panels.ManageGuests;
 
 import com.bookify.Constant.ThemeColors;
+import com.bookify.CustomRenderComponent.CustomTableHeader;
 import com.formdev.flatlaf.FlatClientProperties;
 import javax.swing.ImageIcon;
 
@@ -27,8 +28,7 @@ public class ManageGuest extends javax.swing.JPanel {
 
         guestTabel.putClientProperty(FlatClientProperties.STYLE, "arc:10");
 
-        ThemeColors themeColors = new ThemeColors();
-        guestTabel.getTableHeader().setBackground(themeColors.WHITE);
+        new CustomTableHeader(guestTabel.getTableHeader()).initHeader();
     }
 
     @SuppressWarnings("unchecked")

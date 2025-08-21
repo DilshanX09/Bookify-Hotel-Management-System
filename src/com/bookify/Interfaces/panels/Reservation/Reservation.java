@@ -1,6 +1,7 @@
 package com.bookify.Interfaces.Panels.Reservation;
 
 import com.bookify.Constant.ThemeColors;
+import com.bookify.CustomRenderComponent.CustomTableHeader;
 import com.formdev.flatlaf.FlatClientProperties;
 import javax.swing.ImageIcon;
 
@@ -20,8 +21,7 @@ public final class Reservation extends javax.swing.JPanel {
         jPanel4.putClientProperty(FlatClientProperties.STYLE, "arc:10");
         jPanel5.putClientProperty(FlatClientProperties.STYLE, "arc:10");
 
-        ThemeColors themeColors = new ThemeColors();
-        reservationTable.getTableHeader().setBackground(themeColors.WHITE);
+        new CustomTableHeader(reservationTable.getTableHeader()).initHeader();
     }
 
     @SuppressWarnings("unchecked")
