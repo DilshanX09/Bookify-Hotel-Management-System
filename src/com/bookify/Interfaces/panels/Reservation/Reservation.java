@@ -2,6 +2,7 @@ package com.bookify.Interfaces.Panels.Reservation;
 
 import com.bookify.Constant.ThemeColors;
 import com.bookify.CustomRenderComponent.RoundedBorder;
+import com.bookify.CustomRenderComponent.CustomTableHeader;
 import com.formdev.flatlaf.FlatClientProperties;
 import java.awt.Color;
 
@@ -21,6 +22,7 @@ public final class Reservation extends javax.swing.JPanel {
         RoundedBorder.applyToPanel(jPanel5, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
 
         reservationTable.getTableHeader().setBackground(ThemeColors.WHITE);
+        new CustomTableHeader(reservationTable.getTableHeader()).initHeader();
     }
 
     @SuppressWarnings("unchecked")
