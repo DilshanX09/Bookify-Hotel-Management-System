@@ -1,4 +1,5 @@
-package com.bookify.Interfaces.Panels.Reservation;
+
+package com.bookify.Interfaces.Reservation;
 
 import com.bookify.Constant.ThemeColors;
 import com.formdev.flatlaf.FlatClientProperties;
@@ -10,16 +11,16 @@ public final class Reservation extends javax.swing.JPanel {
         initComponents();
         init();
     }
-
-    public void init() {
+    
+    public void init(){
         homeIcon.setText("");
         homeIcon.setIcon(new ImageIcon(getClass().getResource("/bookify/Resources/Icons/Home.svg")));
         ReserveBookingBtn.putClientProperty(FlatClientProperties.STYLE, "arc:10");
-        jPanel2.putClientProperty(FlatClientProperties.STYLE, "arc:10");
-        jPanel3.putClientProperty(FlatClientProperties.STYLE, "arc:10");
-        jPanel4.putClientProperty(FlatClientProperties.STYLE, "arc:10");
-        jPanel5.putClientProperty(FlatClientProperties.STYLE, "arc:10");
-
+        jPanel2.putClientProperty(FlatClientProperties.STYLE,"arc:10");
+        jPanel3.putClientProperty(FlatClientProperties.STYLE,"arc:10");
+        jPanel4.putClientProperty(FlatClientProperties.STYLE,"arc:10");
+        jPanel5.putClientProperty(FlatClientProperties.STYLE,"arc:10");
+        
         ThemeColors themeColors = new ThemeColors();
         reservationTable.getTableHeader().setBackground(themeColors.WHITE);
     }
@@ -66,11 +67,9 @@ public final class Reservation extends javax.swing.JPanel {
         jLabel2.setText("Reservation Management");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("/");
 
         jLabel3.setFont(new java.awt.Font("Inter 18pt", 1, 26)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Reservations");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -80,17 +79,14 @@ public final class Reservation extends javax.swing.JPanel {
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel4.setFont(new java.awt.Font("Inter 18pt SemiBold", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Total Reservation Today");
 
         jLabel5.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("<html>\nBookings created in the <br/>\nsystem during the last 24 hours.\n</html>");
         jLabel5.setToolTipText("");
 
         todayReservationsLabel.setFont(new java.awt.Font("Inter 18pt", 1, 25)); // NOI18N
-        todayReservationsLabel.setForeground(new java.awt.Color(0, 0, 0));
         todayReservationsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         todayReservationsLabel.setText("30");
 
@@ -129,17 +125,14 @@ public final class Reservation extends javax.swing.JPanel {
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel7.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel7.setText("<html>\nNumber of guests currently <br/>\n staying in the hotel.\n</html>");
         jLabel7.setToolTipText("");
 
         jLabel8.setFont(new java.awt.Font("Inter 18pt SemiBold", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText(" Active Check-ins");
 
         checkInLabel.setFont(new java.awt.Font("Inter 18pt", 1, 25)); // NOI18N
-        checkInLabel.setForeground(new java.awt.Color(0, 0, 0));
         checkInLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkInLabel.setText("30");
 
@@ -178,17 +171,14 @@ public final class Reservation extends javax.swing.JPanel {
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel10.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel10.setText("<html>\nGuests expected to depart today<br/>\nbut are still marked as active in the<br/>\nsystem. \n</html>");
         jLabel10.setToolTipText("");
 
         jLabel11.setFont(new java.awt.Font("Inter 18pt SemiBold", 0, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Pending Check-outs");
 
         checkOutLabel.setFont(new java.awt.Font("Inter 18pt", 1, 25)); // NOI18N
-        checkOutLabel.setForeground(new java.awt.Color(0, 0, 0));
         checkOutLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOutLabel.setText("30");
 
@@ -227,17 +217,14 @@ public final class Reservation extends javax.swing.JPanel {
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel13.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel13.setText("<html>\nBookings that were cancelled today</br>\nbefore guest check-in.\n</html>");
         jLabel13.setToolTipText("");
 
         jLabel14.setFont(new java.awt.Font("Inter 18pt SemiBold", 0, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Cancellation Today");
 
         cancelLabel.setFont(new java.awt.Font("Inter 18pt", 1, 25)); // NOI18N
-        cancelLabel.setForeground(new java.awt.Color(0, 0, 0));
         cancelLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cancelLabel.setText("30");
 
@@ -296,10 +283,8 @@ public final class Reservation extends javax.swing.JPanel {
 
         jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
-        reservationTable.setBackground(new java.awt.Color(255, 255, 255));
         reservationTable.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(237, 237, 237), 1, true));
         reservationTable.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
-        reservationTable.setForeground(new java.awt.Color(0, 0, 0));
         reservationTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -383,7 +368,7 @@ public final class Reservation extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ReserveBookingBtn;
     private javax.swing.JLabel cancelLabel;

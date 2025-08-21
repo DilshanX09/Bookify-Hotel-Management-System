@@ -1,4 +1,4 @@
-package com.bookify.Interfaces.panels.ManageGuests;
+package com.bookify.Interfaces.Panels.ManageGuests;
 
 import com.bookify.Constant.ThemeColors;
 import com.formdev.flatlaf.FlatClientProperties;
