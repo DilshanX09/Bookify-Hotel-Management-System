@@ -1,4 +1,4 @@
-package com.bookify.Interfaces.panels.Reservation;
+package com.bookify.Interfaces.Panels.Reservation;
 
 import com.bookify.Constant.ThemeColors;
 import com.formdev.flatlaf.FlatClientProperties;
