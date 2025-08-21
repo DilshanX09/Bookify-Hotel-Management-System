@@ -1,5 +1,4 @@
-
-package com.bookify.Interfaces.Reservation;
+package com.bookify.Interfaces.panels.Reservation;
 
 import com.bookify.Constant.ThemeColors;
 import com.formdev.flatlaf.FlatClientProperties;
@@ -11,16 +10,16 @@ public final class Reservation extends javax.swing.JPanel {
         initComponents();
         init();
     }
-    
-    public void init(){
+
+    public void init() {
         homeIcon.setText("");
         homeIcon.setIcon(new ImageIcon(getClass().getResource("/bookify/Resources/Icons/Home.svg")));
         ReserveBookingBtn.putClientProperty(FlatClientProperties.STYLE, "arc:10");
-        jPanel2.putClientProperty(FlatClientProperties.STYLE,"arc:10");
-        jPanel3.putClientProperty(FlatClientProperties.STYLE,"arc:10");
-        jPanel4.putClientProperty(FlatClientProperties.STYLE,"arc:10");
-        jPanel5.putClientProperty(FlatClientProperties.STYLE,"arc:10");
-        
+        jPanel2.putClientProperty(FlatClientProperties.STYLE, "arc:10");
+        jPanel3.putClientProperty(FlatClientProperties.STYLE, "arc:10");
+        jPanel4.putClientProperty(FlatClientProperties.STYLE, "arc:10");
+        jPanel5.putClientProperty(FlatClientProperties.STYLE, "arc:10");
+
         ThemeColors themeColors = new ThemeColors();
         reservationTable.getTableHeader().setBackground(themeColors.WHITE);
     }
@@ -361,13 +360,13 @@ public final class Reservation extends javax.swing.JPanel {
                     .addComponent(jLabel2)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(ReserveBookingBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ReserveBookingBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(3, 3, 3)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -384,7 +383,7 @@ public final class Reservation extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ReserveBookingBtn;
     private javax.swing.JLabel cancelLabel;
