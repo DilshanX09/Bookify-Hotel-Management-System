@@ -4,7 +4,6 @@ import com.bookify.CustomRenderComponent.RoundedBorder;
 import com.bookify.CustomRenderComponent.CustomTableHeader;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
-import java.awt.Color;
 
 public final class Reservation extends javax.swing.JPanel {
 
@@ -14,15 +13,19 @@ public final class Reservation extends javax.swing.JPanel {
     }
 
     public void init() {
-        homeIcon.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Home.svg" , homeIcon.getWidth() , homeIcon.getHeight()));
+        homeIcon
+                .setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Home.svg",
+                        homeIcon.getWidth(), homeIcon.getHeight()));
         
-        ReserveBookingBtn.putClientProperty(FlatClientProperties.STYLE, "arc:10");
-
-        RoundedBorder.applyToPanel(jPanel2, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
-        RoundedBorder.applyToPanel(jPanel3, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
-        RoundedBorder.applyToPanel(jPanel4, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
-        RoundedBorder.applyToPanel(jPanel5, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
-
+        reloadBtn.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Reload.svg"));
+        reloadBtn.putClientProperty(FlatClientProperties.STYLE, "arc:12");
+        searchField.putClientProperty(FlatClientProperties.STYLE, "arc:12");
+        ReserveBookingBtn.putClientProperty(FlatClientProperties.STYLE, "arc:12");
+        RoundedBorder.applyLineBorder(jPanel2, 10);
+        RoundedBorder.applyLineBorder(jPanel3, 10);
+        RoundedBorder.applyLineBorder(jPanel4, 10);
+        RoundedBorder.applyLineBorder(jPanel5, 10);
+        RoundedBorder.applyLineBorder(tablePanel, 20);
         new CustomTableHeader(reservationTable.getTableHeader()).initHeader();
     }
 
@@ -30,6 +33,8 @@ public final class Reservation extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jSpinner1 = new javax.swing.JSpinner();
         jLabel6 = new javax.swing.JLabel();
         homeIcon = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -51,12 +56,15 @@ public final class Reservation extends javax.swing.JPanel {
         jLabel14 = new javax.swing.JLabel();
         cancelLabel = new javax.swing.JLabel();
         ReserveBookingBtn = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        tablePanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         reservationTable = new javax.swing.JTable();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        reloadBtn = new javax.swing.JButton();
+        searchField = new javax.swing.JTextField();
+
+        jCheckBox1.setText("jCheckBox1");
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -78,7 +86,7 @@ public final class Reservation extends javax.swing.JPanel {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
-        jLabel4.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
         jLabel4.setText("Total Reservation Today");
 
         jLabel5.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
@@ -130,7 +138,7 @@ public final class Reservation extends javax.swing.JPanel {
         jLabel7.setText("<html>\nNumber of guests currently <br/>\n staying in the hotel.\n</html>");
         jLabel7.setToolTipText("");
 
-        jLabel8.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
         jLabel8.setText("Active Check-ins");
 
         checkInLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
@@ -176,7 +184,7 @@ public final class Reservation extends javax.swing.JPanel {
         jLabel10.setText("<html>\nGuests expected to depart today<br/>\nbut are still marked as active in the<br/>\nsystem. \n</html>");
         jLabel10.setToolTipText("");
 
-        jLabel11.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
         jLabel11.setText("Pending Check-outs");
 
         checkOutLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
@@ -222,7 +230,7 @@ public final class Reservation extends javax.swing.JPanel {
         jLabel13.setText("<html>\nBookings that were cancelled today</br>\nbefore guest check-in.\n</html>");
         jLabel13.setToolTipText("");
 
-        jLabel14.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
         jLabel14.setText("Cancellation Today");
 
         cancelLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
@@ -267,25 +275,11 @@ public final class Reservation extends javax.swing.JPanel {
         ReserveBookingBtn.setText("Reserve Booking");
         ReserveBookingBtn.setPreferredSize(new java.awt.Dimension(130, 41));
 
-        jButton2.setBackground(new java.awt.Color(245, 245, 245));
-        jButton2.setBorder(null);
-        jButton2.setPreferredSize(new java.awt.Dimension(128, 35));
+        tablePanel.setBackground(new java.awt.Color(255, 255, 255));
+        tablePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(247, 247, 247)));
 
-        jButton3.setBackground(new java.awt.Color(245, 245, 245));
-        jButton3.setBorder(null);
-        jButton3.setPreferredSize(new java.awt.Dimension(128, 35));
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
-        jButton4.setBackground(new java.awt.Color(245, 245, 245));
-        jButton4.setBorder(null);
-        jButton4.setPreferredSize(new java.awt.Dimension(128, 35));
-
-        jButton5.setBackground(new java.awt.Color(245, 245, 245));
-        jButton5.setBorder(null);
-        jButton5.setPreferredSize(new java.awt.Dimension(128, 35));
-
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
-
-        reservationTable.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(237, 237, 237), 1, true));
         reservationTable.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         reservationTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -309,66 +303,84 @@ public final class Reservation extends javax.swing.JPanel {
         reservationTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(reservationTable);
 
+        javax.swing.GroupLayout tablePanelLayout = new javax.swing.GroupLayout(tablePanel);
+        tablePanel.setLayout(tablePanelLayout);
+        tablePanelLayout.setHorizontalGroup(
+            tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tablePanelLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jScrollPane1)
+                .addGap(16, 16, 16))
+        );
+        tablePanelLayout.setVerticalGroup(
+            tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tablePanelLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE)
+                .addGap(10, 10, 10))
+        );
+
+        jComboBox1.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Payment Status", " " }));
+
+        jComboBox2.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Reservation Status" }));
+
+        searchField.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
+        searchField.setText("Search");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(homeIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel6)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(reloadBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(ReserveBookingBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1238, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane1))
-                        .addGap(19, 19, 19))))
+                            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(tablePanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(30, 30, 30))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(homeIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabel6)))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jLabel6)
+                    .addComponent(homeIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ReserveBookingBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(reloadBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 419, Short.MAX_VALUE)
-                .addGap(21, 21, 21))
+                .addComponent(tablePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(30, 30, 30))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -379,10 +391,9 @@ public final class Reservation extends javax.swing.JPanel {
     private javax.swing.JLabel checkInLabel;
     private javax.swing.JLabel checkOutLabel;
     private javax.swing.JLabel homeIcon;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
@@ -399,7 +410,11 @@ public final class Reservation extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JButton reloadBtn;
     private javax.swing.JTable reservationTable;
+    private javax.swing.JTextField searchField;
+    private javax.swing.JPanel tablePanel;
     private javax.swing.JLabel todayReservationsLabel;
     // End of variables declaration//GEN-END:variables
 }
