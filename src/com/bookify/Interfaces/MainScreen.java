@@ -17,8 +17,17 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
 
 public class MainScreen extends javax.swing.JFrame {
+
+    static {
+        UIManager.put("Component.borderColor", new Color(237, 237, 237));
+        UIManager.put("Component.focusColor", new Color(237, 237, 237));
+        UIManager.put("Component.focusWidth", 0);
+        UIManager.put("Component.innerFocusWidth", 0);
+        UIManager.put("Component.arc", 12);
+    }
 
     private CardLayout cardLayout;
     private Dashboard dashboard;
@@ -48,7 +57,7 @@ public class MainScreen extends javax.swing.JFrame {
         this.mainPanel.add(dashboard, "dashboard");
         this.mainPanel.add(reservation, "reservation");
         this.mainPanel.add(manageGuest, "manageGuest");
-        
+
         SwingUtilities.updateComponentTreeUI(mainPanel);
     }
 
@@ -315,7 +324,7 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_manageStaffBtnActionPerformed
 
     private void manageGuestsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageGuestsBtnActionPerformed
-         cardLayout.show(mainPanel, "manageGuest");
+        cardLayout.show(mainPanel, "manageGuest");
     }//GEN-LAST:event_manageGuestsBtnActionPerformed
 
     public static void main(String args[]) {
