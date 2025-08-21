@@ -1,5 +1,4 @@
 package com.bookify.Interfaces.panels.Dashboard;
-
 import com.bookify.CustomRenderComponent.RoundedBorder;
 
 public class Dashboard extends javax.swing.JPanel {

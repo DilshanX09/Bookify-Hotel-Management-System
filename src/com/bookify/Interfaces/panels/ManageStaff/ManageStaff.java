@@ -32,19 +32,19 @@ public class ManageStaff extends javax.swing.JPanel {
 
         jLabel3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        totalGuests = new javax.swing.JPanel();
+        totalStaff = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         totalStaffLabel = new javax.swing.JLabel();
-        currentlyCheckIns = new javax.swing.JPanel();
+        activeStaff = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         activeStaffLabel = new javax.swing.JLabel();
-        upcomingCheckouts = new javax.swing.JPanel();
+        onLeave = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         onLeaveLabel = new javax.swing.JLabel();
-        checkOutToday = new javax.swing.JPanel();
+        cleanersOnDuty = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         cleanersLabel = new javax.swing.JLabel();
@@ -67,8 +67,8 @@ public class ManageStaff extends javax.swing.JPanel {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new java.awt.GridLayout(1, 1, 5, 5));
 
-        totalGuests.setBackground(new java.awt.Color(255, 255, 255));
-        totalGuests.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
+        totalStaff.setBackground(new java.awt.Color(255, 255, 255));
+        totalStaff.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel4.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
         jLabel4.setText("Total Staff");
@@ -82,40 +82,41 @@ public class ManageStaff extends javax.swing.JPanel {
         totalStaffLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         totalStaffLabel.setText("30");
 
-        javax.swing.GroupLayout totalGuestsLayout = new javax.swing.GroupLayout(totalGuests);
-        totalGuests.setLayout(totalGuestsLayout);
-        totalGuestsLayout.setHorizontalGroup(
-            totalGuestsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(totalGuestsLayout.createSequentialGroup()
+        javax.swing.GroupLayout totalStaffLayout = new javax.swing.GroupLayout(totalStaff);
+        totalStaff.setLayout(totalStaffLayout);
+        totalStaffLayout.setHorizontalGroup(
+            totalStaffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(totalStaffLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addGroup(totalGuestsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(totalStaffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addGroup(totalGuestsLayout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+
                         .addGap(120, 120, 120)))
                 .addGap(18, 18, 18)
                 .addComponent(totalStaffLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
-        totalGuestsLayout.setVerticalGroup(
-            totalGuestsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, totalGuestsLayout.createSequentialGroup()
+        totalStaffLayout.setVerticalGroup(
+            totalStaffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, totalStaffLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addGroup(totalGuestsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(totalGuestsLayout.createSequentialGroup()
+                .addGroup(totalStaffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(totalStaffLayout.createSequentialGroup()
                         .addComponent(totalStaffLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(24, Short.MAX_VALUE))
-                    .addGroup(totalGuestsLayout.createSequentialGroup()
+                    .addGroup(totalStaffLayout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addGap(5, 5, 5)
                         .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
                         .addGap(12, 12, 12))))
         );
 
-        jPanel2.add(totalGuests);
+        jPanel2.add(totalStaff);
 
-        currentlyCheckIns.setBackground(new java.awt.Color(255, 255, 255));
-        currentlyCheckIns.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
+        activeStaff.setBackground(new java.awt.Color(255, 255, 255));
+        activeStaff.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel7.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -129,13 +130,13 @@ public class ManageStaff extends javax.swing.JPanel {
         activeStaffLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         activeStaffLabel.setText("30");
 
-        javax.swing.GroupLayout currentlyCheckInsLayout = new javax.swing.GroupLayout(currentlyCheckIns);
-        currentlyCheckIns.setLayout(currentlyCheckInsLayout);
-        currentlyCheckInsLayout.setHorizontalGroup(
-            currentlyCheckInsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(currentlyCheckInsLayout.createSequentialGroup()
+        javax.swing.GroupLayout activeStaffLayout = new javax.swing.GroupLayout(activeStaff);
+        activeStaff.setLayout(activeStaffLayout);
+        activeStaffLayout.setHorizontalGroup(
+            activeStaffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(activeStaffLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addGroup(currentlyCheckInsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(activeStaffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
                     .addGroup(currentlyCheckInsLayout.createSequentialGroup()
                         .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
@@ -144,23 +145,23 @@ public class ManageStaff extends javax.swing.JPanel {
                 .addComponent(activeStaffLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
-        currentlyCheckInsLayout.setVerticalGroup(
-            currentlyCheckInsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, currentlyCheckInsLayout.createSequentialGroup()
+        activeStaffLayout.setVerticalGroup(
+            activeStaffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, activeStaffLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addGroup(currentlyCheckInsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(activeStaffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(activeStaffLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, currentlyCheckInsLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, activeStaffLayout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)))
                 .addGap(12, 12, 12))
         );
 
-        jPanel2.add(currentlyCheckIns);
+        jPanel2.add(activeStaff);
 
-        upcomingCheckouts.setBackground(new java.awt.Color(255, 255, 255));
-        upcomingCheckouts.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
+        onLeave.setBackground(new java.awt.Color(255, 255, 255));
+        onLeave.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel10.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -174,27 +175,28 @@ public class ManageStaff extends javax.swing.JPanel {
         onLeaveLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         onLeaveLabel.setText("30");
 
-        javax.swing.GroupLayout upcomingCheckoutsLayout = new javax.swing.GroupLayout(upcomingCheckouts);
-        upcomingCheckouts.setLayout(upcomingCheckoutsLayout);
-        upcomingCheckoutsLayout.setHorizontalGroup(
-            upcomingCheckoutsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(upcomingCheckoutsLayout.createSequentialGroup()
+        javax.swing.GroupLayout onLeaveLayout = new javax.swing.GroupLayout(onLeave);
+        onLeave.setLayout(onLeaveLayout);
+        onLeaveLayout.setHorizontalGroup(
+            onLeaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(onLeaveLayout.createSequentialGroup()
                 .addGap(11, 11, 11)
                 .addGroup(upcomingCheckoutsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                     .addGroup(upcomingCheckoutsLayout.createSequentialGroup()
+
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(onLeaveLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
-        upcomingCheckoutsLayout.setVerticalGroup(
-            upcomingCheckoutsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, upcomingCheckoutsLayout.createSequentialGroup()
+        onLeaveLayout.setVerticalGroup(
+            onLeaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, onLeaveLayout.createSequentialGroup()
                 .addContainerGap(10, Short.MAX_VALUE)
-                .addGroup(upcomingCheckoutsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(upcomingCheckoutsLayout.createSequentialGroup()
+                .addGroup(onLeaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(onLeaveLayout.createSequentialGroup()
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -202,10 +204,10 @@ public class ManageStaff extends javax.swing.JPanel {
                 .addGap(12, 12, 12))
         );
 
-        jPanel2.add(upcomingCheckouts);
+        jPanel2.add(onLeave);
 
-        checkOutToday.setBackground(new java.awt.Color(255, 255, 255));
-        checkOutToday.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
+        cleanersOnDuty.setBackground(new java.awt.Color(255, 255, 255));
+        cleanersOnDuty.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel13.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -219,36 +221,36 @@ public class ManageStaff extends javax.swing.JPanel {
         cleanersLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cleanersLabel.setText("30");
 
-        javax.swing.GroupLayout checkOutTodayLayout = new javax.swing.GroupLayout(checkOutToday);
-        checkOutToday.setLayout(checkOutTodayLayout);
-        checkOutTodayLayout.setHorizontalGroup(
-            checkOutTodayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(checkOutTodayLayout.createSequentialGroup()
+        javax.swing.GroupLayout cleanersOnDutyLayout = new javax.swing.GroupLayout(cleanersOnDuty);
+        cleanersOnDuty.setLayout(cleanersOnDutyLayout);
+        cleanersOnDutyLayout.setHorizontalGroup(
+            cleanersOnDutyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cleanersOnDutyLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addGroup(checkOutTodayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(checkOutTodayLayout.createSequentialGroup()
                         .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(102, 102, 102))
-                    .addGroup(checkOutTodayLayout.createSequentialGroup()
+                    .addGroup(cleanersOnDutyLayout.createSequentialGroup()
                         .addComponent(jLabel13)
                         .addGap(26, 26, 26)))
                 .addComponent(cleanersLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
-        checkOutTodayLayout.setVerticalGroup(
-            checkOutTodayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, checkOutTodayLayout.createSequentialGroup()
+        cleanersOnDutyLayout.setVerticalGroup(
+            cleanersOnDutyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cleanersOnDutyLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addGroup(checkOutTodayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(cleanersOnDutyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(cleanersLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, checkOutTodayLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, cleanersOnDutyLayout.createSequentialGroup()
                         .addComponent(jLabel14)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)))
                 .addGap(12, 12, 12))
         );
 
-        jPanel2.add(checkOutToday);
+        jPanel2.add(cleanersOnDuty);
 
         registerMemberBtn.setBackground(new java.awt.Color(0, 0, 0));
         registerMemberBtn.setFont(new java.awt.Font("Inter 18pt Medium", 0, 13)); // NOI18N
@@ -390,9 +392,8 @@ public class ManageStaff extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> Status;
     private javax.swing.JLabel activeStaffLabel;
-    private javax.swing.JPanel checkOutToday;
     private javax.swing.JLabel cleanersLabel;
-    private javax.swing.JPanel currentlyCheckIns;
+    private javax.swing.JPanel cleanersOnDuty;
     private javax.swing.JLabel homeIcon;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel10;
@@ -407,6 +408,7 @@ public class ManageStaff extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel onLeave;
     private javax.swing.JLabel onLeaveLabel;
     private javax.swing.JButton registerMemberBtn;
     private javax.swing.JButton reloadBtn;
@@ -415,6 +417,5 @@ public class ManageStaff extends javax.swing.JPanel {
     private javax.swing.JPanel tablePanel;
     private javax.swing.JPanel totalGuests;
     private javax.swing.JLabel totalStaffLabel;
-    private javax.swing.JPanel upcomingCheckouts;
     // End of variables declaration//GEN-END:variables
 }
