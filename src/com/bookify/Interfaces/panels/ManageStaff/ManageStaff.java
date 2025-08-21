@@ -14,10 +14,10 @@ public class ManageStaff extends javax.swing.JPanel {
 
     private void init() {
         homeIcon.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Home.svg", homeIcon.getWidth(), homeIcon.getHeight()));
-        RoundedBorder.applyLineBorder(totalGuests, 20);
-        RoundedBorder.applyLineBorder(currentlyCheckIns, 20);
-        RoundedBorder.applyLineBorder(upcomingCheckouts, 20);
-        RoundedBorder.applyLineBorder(checkOutToday, 20);
+        RoundedBorder.applyLineBorder(totalStaff, 20);
+        RoundedBorder.applyLineBorder(activeStaff, 20);
+        RoundedBorder.applyLineBorder(onLeave, 20);
+        RoundedBorder.applyLineBorder(cleanersOnDuty, 20);
         RoundedBorder.applyLineBorder(tablePanel, 20);
         reloadBtn.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Reload.svg"));
         reloadBtn.putClientProperty(FlatClientProperties.STYLE, "arc:12");
@@ -90,9 +90,8 @@ public class ManageStaff extends javax.swing.JPanel {
                 .addGap(12, 12, 12)
                 .addGroup(totalStaffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
-                    .addGroup(totalGuestsLayout.createSequentialGroup()
+                    .addGroup(totalStaffLayout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
-
                         .addGap(120, 120, 120)))
                 .addGap(18, 18, 18)
                 .addComponent(totalStaffLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -138,7 +137,7 @@ public class ManageStaff extends javax.swing.JPanel {
                 .addGap(12, 12, 12)
                 .addGroup(activeStaffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
-                    .addGroup(currentlyCheckInsLayout.createSequentialGroup()
+                    .addGroup(activeStaffLayout.createSequentialGroup()
                         .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
                         .addGap(72, 72, 72)))
                 .addGap(18, 18, 18)
@@ -181,10 +180,9 @@ public class ManageStaff extends javax.swing.JPanel {
             onLeaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(onLeaveLayout.createSequentialGroup()
                 .addGap(11, 11, 11)
-                .addGroup(upcomingCheckoutsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(onLeaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
-                    .addGroup(upcomingCheckoutsLayout.createSequentialGroup()
-
+                    .addGroup(onLeaveLayout.createSequentialGroup()
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -227,8 +225,8 @@ public class ManageStaff extends javax.swing.JPanel {
             cleanersOnDutyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cleanersOnDutyLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addGroup(checkOutTodayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(checkOutTodayLayout.createSequentialGroup()
+                .addGroup(cleanersOnDutyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cleanersOnDutyLayout.createSequentialGroup()
                         .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(102, 102, 102))
                     .addGroup(cleanersOnDutyLayout.createSequentialGroup()
@@ -370,9 +368,9 @@ public class ManageStaff extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(registerMemberBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addGap(20, 20, 20)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(Status, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -391,6 +389,7 @@ public class ManageStaff extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> Status;
+    private javax.swing.JPanel activeStaff;
     private javax.swing.JLabel activeStaffLabel;
     private javax.swing.JLabel cleanersLabel;
     private javax.swing.JPanel cleanersOnDuty;
@@ -415,7 +414,7 @@ public class ManageStaff extends javax.swing.JPanel {
     private javax.swing.JTextField searchField;
     private javax.swing.JTable staffTabel;
     private javax.swing.JPanel tablePanel;
-    private javax.swing.JPanel totalGuests;
+    private javax.swing.JPanel totalStaff;
     private javax.swing.JLabel totalStaffLabel;
     // End of variables declaration//GEN-END:variables
 }
