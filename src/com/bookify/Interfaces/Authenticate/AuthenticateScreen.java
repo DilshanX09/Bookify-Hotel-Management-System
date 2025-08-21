@@ -12,7 +12,6 @@ public class AuthenticateScreen extends javax.swing.JDialog {
         init();
     }
 
-    private void init() {
     private void init() {   
         mainLogo.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Logo.svg", mainLogo.getWidth(), mainLogo.getHeight()));
         usernameField.putClientProperty(FlatClientProperties.STYLE, "arc:10");
