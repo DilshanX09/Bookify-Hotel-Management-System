@@ -15,19 +15,15 @@ public class ManageGuest extends javax.swing.JPanel {
     }
 
     private void init() {
-
         homeIcon.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Home.svg", homeIcon.getWidth(), homeIcon.getHeight()));
-
         RoundedBorder.applyLineBorder(totalGuests, 20);
         RoundedBorder.applyLineBorder(currentlyCheckIns, 20);
         RoundedBorder.applyLineBorder(upcomingCheckouts, 20);
         RoundedBorder.applyLineBorder(checkOutToday, 20);
         RoundedBorder.applyLineBorder(tablePanel, 20);
-
         reloadBtn.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Reload.svg"));
         reloadBtn.putClientProperty(FlatClientProperties.STYLE, "arc:12");
         searchField.putClientProperty(FlatClientProperties.STYLE, "arc:12");
-
         new CustomTableHeader(guestTabel.getTableHeader()).initHeader();
     }
 
@@ -75,7 +71,8 @@ public class ManageGuest extends javax.swing.JPanel {
         jLabel2.setText("/  Guest Management");
 
         jLabel3.setFont(new java.awt.Font("Inter 18pt", 1, 26)); // NOI18N
-        jLabel3.setText("Manage Guests");
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Guest Management");
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new java.awt.GridLayout(1, 1, 5, 5));
@@ -84,14 +81,17 @@ public class ManageGuest extends javax.swing.JPanel {
         totalGuests.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel4.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Total Guests");
 
         jLabel5.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("<html>\nCumulative count of all guests who<br/>\nhave stayed or booked.\n</html>");
         jLabel5.setToolTipText("");
 
         totalGuestLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
+        totalGuestLabel.setForeground(new java.awt.Color(0, 0, 0));
         totalGuestLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         totalGuestLabel.setText("30");
 
@@ -131,14 +131,17 @@ public class ManageGuest extends javax.swing.JPanel {
         currentlyCheckIns.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel7.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel7.setText("<html>\nNumber of guests currently <br/>\n staying in the hotel.\n</html>");
         jLabel7.setToolTipText("");
 
         jLabel8.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Currently Check-ins");
 
         checkInLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
+        checkInLabel.setForeground(new java.awt.Color(0, 0, 0));
         checkInLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkInLabel.setText("30");
 
@@ -176,14 +179,17 @@ public class ManageGuest extends javax.swing.JPanel {
         upcomingCheckouts.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel10.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel10.setText("<html>\nGuests presently checked into their<br/>\nrooms.\n</html>");
         jLabel10.setToolTipText("");
 
         jLabel11.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Upcoming Check-outs");
 
         checkOutLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
+        checkOutLabel.setForeground(new java.awt.Color(0, 0, 0));
         checkOutLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOutLabel.setText("30");
 
@@ -192,28 +198,26 @@ public class ManageGuest extends javax.swing.JPanel {
         upcomingCheckoutsLayout.setHorizontalGroup(
             upcomingCheckoutsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(upcomingCheckoutsLayout.createSequentialGroup()
+                .addGap(11, 11, 11)
                 .addGroup(upcomingCheckoutsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
                     .addGroup(upcomingCheckoutsLayout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(74, 74, 74))
-                    .addGroup(upcomingCheckoutsLayout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(jLabel10)
-                        .addGap(23, 23, 23)))
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(checkOutLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
         upcomingCheckoutsLayout.setVerticalGroup(
             upcomingCheckoutsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, upcomingCheckoutsLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(upcomingCheckoutsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(checkOutLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(10, Short.MAX_VALUE)
+                .addGroup(upcomingCheckoutsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(upcomingCheckoutsLayout.createSequentialGroup()
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(checkOutLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12))
         );
 
@@ -223,14 +227,17 @@ public class ManageGuest extends javax.swing.JPanel {
         checkOutToday.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel13.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel13.setText("<html> Guests who departed the hotel<br/> today. </html>");
         jLabel13.setToolTipText("");
 
         jLabel14.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Check-out Today");
 
         checkOutTodayLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
+        checkOutTodayLabel.setForeground(new java.awt.Color(0, 0, 0));
         checkOutTodayLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOutTodayLabel.setText("30");
 
@@ -282,6 +289,7 @@ public class ManageGuest extends javax.swing.JPanel {
 
         guestTabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         guestTabel.setFont(new java.awt.Font("Inter 18pt", 0, 13)); // NOI18N
+        guestTabel.setForeground(new java.awt.Color(0, 0, 0));
         guestTabel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
