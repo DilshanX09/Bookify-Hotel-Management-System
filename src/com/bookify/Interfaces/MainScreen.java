@@ -2,9 +2,10 @@ package com.bookify.Interfaces;
 
 import com.bookify.Constant.ThemeColors;
 import com.bookify.CustomRenderComponent.RoundedBorder;
-import com.bookify.Interfaces.Panels.Dashboard.Dashboard;
 import com.bookify.Interfaces.Panels.ManageGuests.ManageGuest;
 import com.bookify.Interfaces.Panels.Reservation.Reservation;
+import com.bookify.Interfaces.panels.Dashboard.Dashboard;
+import com.bookify.Interfaces.panels.ManageStaff.ManageStaff;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
@@ -33,6 +34,7 @@ public class MainScreen extends javax.swing.JFrame {
     private Dashboard dashboard;
     private Reservation reservation;
     private ManageGuest manageGuest;
+    private ManageStaff manageStaff;
 
     public MainScreen() {
         initComponents();
@@ -49,6 +51,7 @@ public class MainScreen extends javax.swing.JFrame {
         this.dashboard = new Dashboard();
         this.reservation = new Reservation();
         this.manageGuest = new ManageGuest();
+        this.manageStaff = new ManageStaff();
 
         RoundedBorder.applyToPanel(dashboard, 20, 1, Color.decode("#D9D9D9"), Color.WHITE);
         RoundedBorder.applyToPanel(reservation, 20, 1, Color.decode("#D9D9D9"), Color.WHITE);
@@ -57,6 +60,7 @@ public class MainScreen extends javax.swing.JFrame {
         this.mainPanel.add(dashboard, "dashboard");
         this.mainPanel.add(reservation, "reservation");
         this.mainPanel.add(manageGuest, "manageGuest");
+        this.mainPanel.add(manageStaff, "manageStaff");
 
         SwingUtilities.updateComponentTreeUI(mainPanel);
     }
@@ -320,7 +324,7 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_roomOperationBtnActionPerformed
 
     private void manageStaffBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageStaffBtnActionPerformed
-
+        cardLayout.show(mainPanel, "manageStaff");
     }//GEN-LAST:event_manageStaffBtnActionPerformed
 
     private void manageGuestsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageGuestsBtnActionPerformed

@@ -4,7 +4,6 @@ import com.bookify.CustomRenderComponent.CustomTableHeader;
 import com.bookify.CustomRenderComponent.RoundedBorder;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
-import java.awt.Color;
 
 public class ManageStaff extends javax.swing.JPanel {
 
@@ -15,17 +14,15 @@ public class ManageStaff extends javax.swing.JPanel {
 
     private void init() {
         homeIcon.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Home.svg", homeIcon.getWidth(), homeIcon.getHeight()));
-
-        RoundedBorder.applyToPanel(totalStaff, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
-        RoundedBorder.applyToPanel(activeStaff, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
-        RoundedBorder.applyToPanel(onLeave, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
-        RoundedBorder.applyToPanel(cleanersOnDuty, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
-
-        jButton2.putClientProperty(FlatClientProperties.STYLE, "arc:10");
-        jButton3.putClientProperty(FlatClientProperties.STYLE, "arc:10");
-        jButton4.putClientProperty(FlatClientProperties.STYLE, "arc:10");
-        jButton5.putClientProperty(FlatClientProperties.STYLE, "arc:10");
-
+        RoundedBorder.applyLineBorder(totalStaff, 20);
+        RoundedBorder.applyLineBorder(activeStaff, 20);
+        RoundedBorder.applyLineBorder(onLeave, 20);
+        RoundedBorder.applyLineBorder(cleanersOnDuty, 20);
+        RoundedBorder.applyLineBorder(tablePanel, 20);
+        reloadBtn.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Reload.svg"));
+        reloadBtn.putClientProperty(FlatClientProperties.STYLE, "arc:12");
+        searchField.putClientProperty(FlatClientProperties.STYLE, "arc:12");
+        registerMemberBtn.putClientProperty(FlatClientProperties.STYLE, "arc:12");
         new CustomTableHeader(staffTabel.getTableHeader()).initHeader();
     }
 
@@ -33,8 +30,6 @@ public class ManageStaff extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        homeIcon = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         totalStaff = new javax.swing.JPanel();
@@ -53,27 +48,20 @@ public class ManageStaff extends javax.swing.JPanel {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         cleanersLabel = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        registerMemberBtn = new javax.swing.JButton();
+        Status = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        reloadBtn = new javax.swing.JButton();
+        searchField = new javax.swing.JTextField();
+        tablePanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         staffTabel = new javax.swing.JTable();
-        registerMemberBtn = new javax.swing.JButton();
+        homeIcon = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        homeIcon.setBackground(new java.awt.Color(255, 255, 255));
-        homeIcon.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        homeIcon.setOpaque(true);
-
-        jLabel2.setBackground(new java.awt.Color(100, 100, 100));
-        jLabel2.setFont(new java.awt.Font("Inter 18pt Medium", 0, 13)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("/  Staff Management");
-
         jLabel3.setFont(new java.awt.Font("Inter 18pt", 1, 26)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Staff Management");
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -83,17 +71,14 @@ public class ManageStaff extends javax.swing.JPanel {
         totalStaff.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel4.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Total Staff");
 
         jLabel5.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("<html>\nComplete count of all staff<br/>\ncurrently in the system.\n</html>");
         jLabel5.setToolTipText("");
 
         totalStaffLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
-        totalStaffLabel.setForeground(new java.awt.Color(0, 0, 0));
         totalStaffLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         totalStaffLabel.setText("30");
 
@@ -106,7 +91,7 @@ public class ManageStaff extends javax.swing.JPanel {
                 .addGroup(totalStaffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addGroup(totalStaffLayout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
                         .addGap(120, 120, 120)))
                 .addGap(18, 18, 18)
                 .addComponent(totalStaffLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -133,17 +118,14 @@ public class ManageStaff extends javax.swing.JPanel {
         activeStaff.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel7.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel7.setText("<html>\nStaff members currently marked as<br/>\nactive and available.\n</html>");
         jLabel7.setToolTipText("");
 
         jLabel8.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Active Staff");
 
         activeStaffLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
-        activeStaffLabel.setForeground(new java.awt.Color(0, 0, 0));
         activeStaffLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         activeStaffLabel.setText("30");
 
@@ -156,7 +138,7 @@ public class ManageStaff extends javax.swing.JPanel {
                 .addGroup(activeStaffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
                     .addGroup(activeStaffLayout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
                         .addGap(72, 72, 72)))
                 .addGap(18, 18, 18)
                 .addComponent(activeStaffLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -181,17 +163,14 @@ public class ManageStaff extends javax.swing.JPanel {
         onLeave.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel10.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel10.setText("<html>\nStaff currently not reporting for<br/>\nduty due to approved leave.\n</html>");
         jLabel10.setToolTipText("");
 
         jLabel11.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("On Leave");
 
         onLeaveLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
-        onLeaveLabel.setForeground(new java.awt.Color(0, 0, 0));
         onLeaveLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         onLeaveLabel.setText("30");
 
@@ -202,7 +181,7 @@ public class ManageStaff extends javax.swing.JPanel {
             .addGroup(onLeaveLayout.createSequentialGroup()
                 .addGap(11, 11, 11)
                 .addGroup(onLeaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                     .addGroup(onLeaveLayout.createSequentialGroup()
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -229,17 +208,14 @@ public class ManageStaff extends javax.swing.JPanel {
         cleanersOnDuty.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
         jLabel13.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel13.setText("<html>\nCleaners currently marked as on<br/>\nduty and available.. \n</html>");
         jLabel13.setToolTipText("");
 
         jLabel14.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Cleaners On Duty");
 
         cleanersLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
-        cleanersLabel.setForeground(new java.awt.Color(0, 0, 0));
         cleanersLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cleanersLabel.setText("30");
 
@@ -251,7 +227,7 @@ public class ManageStaff extends javax.swing.JPanel {
                 .addGap(12, 12, 12)
                 .addGroup(cleanersOnDutyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cleanersOnDutyLayout.createSequentialGroup()
-                        .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                        .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(102, 102, 102))
                     .addGroup(cleanersOnDutyLayout.createSequentialGroup()
                         .addComponent(jLabel13)
@@ -274,36 +250,39 @@ public class ManageStaff extends javax.swing.JPanel {
 
         jPanel2.add(cleanersOnDuty);
 
-        jButton2.setBackground(new java.awt.Color(245, 245, 245));
-        jButton2.setBorder(null);
-        jButton2.setPreferredSize(new java.awt.Dimension(128, 35));
+        registerMemberBtn.setBackground(new java.awt.Color(0, 0, 0));
+        registerMemberBtn.setFont(new java.awt.Font("Inter 18pt Medium", 0, 13)); // NOI18N
+        registerMemberBtn.setForeground(new java.awt.Color(255, 255, 255));
+        registerMemberBtn.setText("Register Staff Member");
+        registerMemberBtn.setMaximumSize(new java.awt.Dimension(135, 24));
+        registerMemberBtn.setMinimumSize(new java.awt.Dimension(135, 24));
+        registerMemberBtn.setPreferredSize(new java.awt.Dimension(135, 24));
+        registerMemberBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerMemberBtnActionPerformed(evt);
+            }
+        });
 
-        jButton3.setBackground(new java.awt.Color(245, 245, 245));
-        jButton3.setBorder(null);
-        jButton3.setPreferredSize(new java.awt.Dimension(128, 35));
+        Status.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
+        Status.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Staff Status" }));
 
-        jButton5.setBackground(new java.awt.Color(245, 245, 245));
-        jButton5.setBorder(null);
-        jButton5.setPreferredSize(new java.awt.Dimension(128, 35));
+        jComboBox2.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Staff Role" }));
 
-        jButton4.setBackground(new java.awt.Color(245, 245, 245));
-        jButton4.setBorder(null);
-        jButton4.setPreferredSize(new java.awt.Dimension(128, 35));
+        searchField.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
+        searchField.setText("Search");
+
+        tablePanel.setBackground(new java.awt.Color(255, 255, 255));
+        tablePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(247, 247, 247)));
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
-        jScrollPane1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(237, 237, 237), 1, true));
-        jScrollPane1.setForeground(new java.awt.Color(0, 0, 0));
+        jScrollPane1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
 
-        staffTabel.setBackground(new java.awt.Color(255, 255, 255));
-        staffTabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
+        staffTabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         staffTabel.setFont(new java.awt.Font("Inter 18pt", 0, 13)); // NOI18N
-        staffTabel.setForeground(new java.awt.Color(0, 0, 0));
         staffTabel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "Staff ID", "Full Name", "Role", "Contact", "Email Address", "Joined Date", "Status", "Arrival Schedule", "Action"
@@ -322,94 +301,108 @@ public class ManageStaff extends javax.swing.JPanel {
         staffTabel.setSelectionForeground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(staffTabel);
 
-        registerMemberBtn.setBackground(new java.awt.Color(0, 0, 0));
-        registerMemberBtn.setFont(new java.awt.Font("Inter 18pt Medium", 0, 13)); // NOI18N
-        registerMemberBtn.setForeground(new java.awt.Color(255, 255, 255));
-        registerMemberBtn.setText("Register Member");
-        registerMemberBtn.setMaximumSize(new java.awt.Dimension(135, 24));
-        registerMemberBtn.setMinimumSize(new java.awt.Dimension(135, 24));
-        registerMemberBtn.setPreferredSize(new java.awt.Dimension(135, 24));
+        javax.swing.GroupLayout tablePanelLayout = new javax.swing.GroupLayout(tablePanel);
+        tablePanel.setLayout(tablePanelLayout);
+        tablePanelLayout.setHorizontalGroup(
+            tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tablePanelLayout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addComponent(jScrollPane1)
+                .addGap(10, 10, 10))
+        );
+        tablePanelLayout.setVerticalGroup(
+            tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tablePanelLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                .addGap(10, 10, 10))
+        );
+
+        homeIcon.setBackground(new java.awt.Color(255, 255, 255));
+        homeIcon.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        homeIcon.setOpaque(true);
+
+        jLabel6.setBackground(new java.awt.Color(100, 100, 100));
+        jLabel6.setFont(new java.awt.Font("Inter 18pt Medium", 0, 13)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("/  Staff Management");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(582, 582, 582)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
                         .addComponent(homeIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel3)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(registerMemberBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel6)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(registerMemberBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tablePanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Status, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(reloadBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(30, 30, 30))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(homeIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(22, 22, 22)
-                                .addComponent(jLabel3))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(jLabel2)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(registerMemberBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(homeIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(registerMemberBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(Status, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(reloadBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(tablePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(30, 30, 30))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void registerMemberBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerMemberBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_registerMemberBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> Status;
     private javax.swing.JPanel activeStaff;
     private javax.swing.JLabel activeStaffLabel;
     private javax.swing.JLabel cleanersLabel;
     private javax.swing.JPanel cleanersOnDuty;
     private javax.swing.JLabel homeIcon;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
@@ -417,7 +410,10 @@ public class ManageStaff extends javax.swing.JPanel {
     private javax.swing.JPanel onLeave;
     private javax.swing.JLabel onLeaveLabel;
     private javax.swing.JButton registerMemberBtn;
+    private javax.swing.JButton reloadBtn;
+    private javax.swing.JTextField searchField;
     private javax.swing.JTable staffTabel;
+    private javax.swing.JPanel tablePanel;
     private javax.swing.JPanel totalStaff;
     private javax.swing.JLabel totalStaffLabel;
     // End of variables declaration//GEN-END:variables

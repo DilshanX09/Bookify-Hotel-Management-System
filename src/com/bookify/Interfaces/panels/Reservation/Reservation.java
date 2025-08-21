@@ -86,7 +86,7 @@ public final class Reservation extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
-      
+
         jLabel4.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
         jLabel4.setText("Total Reservation Today");
 

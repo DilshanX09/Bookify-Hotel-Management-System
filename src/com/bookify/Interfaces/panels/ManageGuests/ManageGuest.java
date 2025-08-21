@@ -4,8 +4,6 @@ import com.bookify.CustomRenderComponent.CustomTableHeader;
 import com.bookify.CustomRenderComponent.RoundedBorder;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
-import java.awt.Color;
-import javax.swing.ImageIcon;
 
 public class ManageGuest extends javax.swing.JPanel {
 
