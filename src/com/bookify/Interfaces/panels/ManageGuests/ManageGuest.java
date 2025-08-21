@@ -21,9 +21,7 @@ public class ManageGuest extends javax.swing.JPanel {
         RoundedBorder.applyToPanel(currentlyCheckIns, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
         RoundedBorder.applyToPanel(upcomingCheckouts, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
         RoundedBorder.applyToPanel(checkOutToday, 10, 1, Color.decode("#D9D9D9"), Color.WHITE);
-        checkOutToday.putClientProperty(FlatClientProperties.STYLE, "arc:10");
-
-
+        
         jButton2.putClientProperty(FlatClientProperties.STYLE, "arc:10");
         jButton3.putClientProperty(FlatClientProperties.STYLE, "arc:10");
         jButton4.putClientProperty(FlatClientProperties.STYLE, "arc:10");
