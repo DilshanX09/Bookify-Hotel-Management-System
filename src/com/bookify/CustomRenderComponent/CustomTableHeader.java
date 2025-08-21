@@ -1,4 +1,4 @@
-package com.bookify.Interfaces.CustomRenderComponent;
+package com.bookify.CustomRenderComponent;
 
 import com.bookify.Constant.ThemeColors;
 import java.awt.Color;
