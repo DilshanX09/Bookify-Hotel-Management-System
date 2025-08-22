@@ -19,7 +19,7 @@ public class ManageGuest extends javax.swing.JPanel {
         RoundedBorder.applyLineBorder(upcomingCheckouts, 20);
         RoundedBorder.applyLineBorder(checkOutToday, 20);
         RoundedBorder.applyLineBorder(tablePanel, 20);
-        reloadBtn.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Reload.svg"));
+        reloadBtn.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Reload.svg", 20, 20));
         reloadBtn.putClientProperty(FlatClientProperties.STYLE, "arc:12");
         searchField.putClientProperty(FlatClientProperties.STYLE, "arc:12");
         new CustomTableHeader(guestTabel.getTableHeader()).initHeader();
@@ -259,12 +259,16 @@ public class ManageGuest extends javax.swing.JPanel {
 
         jComboBox1.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Booking Status" }));
+        jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jComboBox2.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Payment Status" }));
+        jComboBox2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        reloadBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         searchField.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
-        searchField.setText("Search");
+        searchField.setText("Search...");
 
         tablePanel.setBackground(new java.awt.Color(255, 255, 255));
         tablePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(247, 247, 247)));
@@ -307,8 +311,8 @@ public class ManageGuest extends javax.swing.JPanel {
         tablePanelLayout.setVerticalGroup(
             tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tablePanelLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE)
-                .addGap(10, 10, 10))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 507, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -357,7 +361,7 @@ public class ManageGuest extends javax.swing.JPanel {
                     .addComponent(reloadBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(tablePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(27, 27, 27))
+                .addGap(30, 30, 30))
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -16,8 +16,8 @@ public final class Reservation extends javax.swing.JPanel {
         homeIcon
                 .setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Home.svg",
                         homeIcon.getWidth(), homeIcon.getHeight()));
-        
-        reloadBtn.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Reload.svg"));
+
+        reloadBtn.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Reload.svg", 20, 20));
         reloadBtn.putClientProperty(FlatClientProperties.STYLE, "arc:12");
         searchField.putClientProperty(FlatClientProperties.STYLE, "arc:12");
         ReserveBookingBtn.putClientProperty(FlatClientProperties.STYLE, "arc:12");
@@ -273,6 +273,7 @@ public final class Reservation extends javax.swing.JPanel {
         ReserveBookingBtn.setFont(new java.awt.Font("Inter 18pt Medium", 0, 13)); // NOI18N
         ReserveBookingBtn.setForeground(new java.awt.Color(255, 255, 255));
         ReserveBookingBtn.setText("Reserve Booking");
+        ReserveBookingBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ReserveBookingBtn.setPreferredSize(new java.awt.Dimension(130, 41));
 
         tablePanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -322,12 +323,24 @@ public final class Reservation extends javax.swing.JPanel {
 
         jComboBox1.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Payment Status", " " }));
+        jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jComboBox2.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Reservation Status" }));
+        jComboBox2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        reloadBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         searchField.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
-        searchField.setText("Search");
+        searchField.setText("Search...");
+        searchField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                searchFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                searchFieldFocusLost(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -383,6 +396,14 @@ public final class Reservation extends javax.swing.JPanel {
                 .addGap(30, 30, 30))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void searchFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchFieldFocusGained
+        searchField.setText("");
+    }//GEN-LAST:event_searchFieldFocusGained
+
+    private void searchFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchFieldFocusLost
+        searchField.setText("Search...");
+    }//GEN-LAST:event_searchFieldFocusLost
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

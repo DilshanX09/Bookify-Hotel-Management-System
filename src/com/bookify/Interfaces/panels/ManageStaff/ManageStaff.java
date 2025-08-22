@@ -19,7 +19,7 @@ public class ManageStaff extends javax.swing.JPanel {
         RoundedBorder.applyLineBorder(onLeave, 20);
         RoundedBorder.applyLineBorder(cleanersOnDuty, 20);
         RoundedBorder.applyLineBorder(tablePanel, 20);
-        reloadBtn.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Reload.svg"));
+        reloadBtn.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Reload.svg", 20, 20));
         reloadBtn.putClientProperty(FlatClientProperties.STYLE, "arc:12");
         searchField.putClientProperty(FlatClientProperties.STYLE, "arc:12");
         registerMemberBtn.putClientProperty(FlatClientProperties.STYLE, "arc:12");
@@ -254,6 +254,7 @@ public class ManageStaff extends javax.swing.JPanel {
         registerMemberBtn.setFont(new java.awt.Font("Inter 18pt Medium", 0, 13)); // NOI18N
         registerMemberBtn.setForeground(new java.awt.Color(255, 255, 255));
         registerMemberBtn.setText("Register Staff Member");
+        registerMemberBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         registerMemberBtn.setMaximumSize(new java.awt.Dimension(135, 24));
         registerMemberBtn.setMinimumSize(new java.awt.Dimension(135, 24));
         registerMemberBtn.setPreferredSize(new java.awt.Dimension(135, 24));
@@ -265,12 +266,24 @@ public class ManageStaff extends javax.swing.JPanel {
 
         Status.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         Status.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Staff Status" }));
+        Status.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jComboBox2.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Staff Role" }));
+        jComboBox2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        reloadBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         searchField.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
-        searchField.setText("Search");
+        searchField.setText("Search...");
+        searchField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                searchFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                searchFieldFocusLost(evt);
+            }
+        });
 
         tablePanel.setBackground(new java.awt.Color(255, 255, 255));
         tablePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(247, 247, 247)));
@@ -383,8 +396,16 @@ public class ManageStaff extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void registerMemberBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerMemberBtnActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_registerMemberBtnActionPerformed
+
+    private void searchFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchFieldFocusGained
+        searchField.setText("");
+    }//GEN-LAST:event_searchFieldFocusGained
+
+    private void searchFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchFieldFocusLost
+        searchField.setText("Search...");
+    }//GEN-LAST:event_searchFieldFocusLost
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
