@@ -20,7 +20,7 @@ public class RoomOperation extends javax.swing.JPanel {
         RoundedBorder.applyLineBorder(roomMaintanance, 20);
         RoundedBorder.applyLineBorder(cleaningPendings, 20);
         RoundedBorder.applyLineBorder(tablePanel, 20);
-        reloadBtn.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Reload.svg"));
+        reloadBtn.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Reload.svg", 20, 20));
         reloadBtn.putClientProperty(FlatClientProperties.STYLE, "arc:12");
         searchField.putClientProperty(FlatClientProperties.STYLE, "arc:12");
         new CustomTableHeader(roomOperationTable.getTableHeader()).initHeader();
@@ -263,15 +263,28 @@ public class RoomOperation extends javax.swing.JPanel {
         roomRegisterBtn.setFont(new java.awt.Font("Inter 18pt Medium", 0, 13)); // NOI18N
         roomRegisterBtn.setForeground(new java.awt.Color(255, 255, 255));
         roomRegisterBtn.setText("Register Room");
+        roomRegisterBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jComboBox2.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Payment Status" }));
+        jComboBox2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jComboBox1.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Booking Status" }));
+        jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        reloadBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         searchField.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
-        searchField.setText("Search");
+        searchField.setText("Search...");
+        searchField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                searchFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                searchFieldFocusLost(evt);
+            }
+        });
 
         tablePanel.setBackground(new java.awt.Color(255, 255, 255));
         tablePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(247, 247, 247)));
@@ -370,6 +383,14 @@ public class RoomOperation extends javax.swing.JPanel {
                 .addGap(33, 33, 33))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void searchFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchFieldFocusGained
+        searchField.setText("");
+    }//GEN-LAST:event_searchFieldFocusGained
+
+    private void searchFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchFieldFocusLost
+        searchField.setText("Search...");
+    }//GEN-LAST:event_searchFieldFocusLost
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
