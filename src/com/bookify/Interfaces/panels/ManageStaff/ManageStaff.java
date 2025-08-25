@@ -2,6 +2,7 @@ package com.bookify.Interfaces.panels.ManageStaff;
 
 import com.bookify.CustomRenderComponent.CustomTableHeader;
 import com.bookify.CustomRenderComponent.RoundedBorder;
+import com.bookify.Interfaces.ManageStaff.Dialogs.RegisterStaffMember;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
 
@@ -397,6 +398,11 @@ public class ManageStaff extends javax.swing.JPanel {
 
     private void registerMemberBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerMemberBtnActionPerformed
 
+        java.awt.Window parentWindow = javax.swing.SwingUtilities.getWindowAncestor(this);
+        RegisterStaffMember dialog = new RegisterStaffMember(this, (java.awt.Frame) parentWindow, true);
+        dialog.setLocationRelativeTo(parentWindow);
+        dialog.setVisible(true);
+        
     }//GEN-LAST:event_registerMemberBtnActionPerformed
 
     private void searchFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchFieldFocusGained
