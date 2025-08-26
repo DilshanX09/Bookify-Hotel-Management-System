@@ -2,11 +2,11 @@ package com.bookify.Interfaces;
 
 import com.bookify.Constant.ThemeColors;
 import com.bookify.CustomRenderComponent.RoundedBorder;
-import com.bookify.Interfaces.Panels.ManageGuests.ManageGuest;
-import com.bookify.Interfaces.Panels.Reservation.Reservation;
-import com.bookify.Interfaces.panels.Dashboard.Dashboard;
-import com.bookify.Interfaces.panels.ManageStaff.ManageStaff;
-import com.bookify.Interfaces.panels.RoomOperation.RoomOperation;
+import com.bookify.Interfaces.ManageGuests.Panels.ManageGuest;
+import com.bookify.Interfaces.Reservation.Panels.Reservation;
+import com.bookify.Interfaces.Dashboard.Panels.Dashboard;
+import com.bookify.Interfaces.ManageStaff.Panels.ManageStaff;
+import com.bookify.Interfaces.RoomOperation.Panels.RoomOperation;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.extras.FlatSVGIcon;

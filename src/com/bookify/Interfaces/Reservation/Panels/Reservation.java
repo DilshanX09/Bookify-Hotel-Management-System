@@ -1,4 +1,4 @@
-package com.bookify.Interfaces.Panels.Reservation;
+package com.bookify.Interfaces.Reservation.Panels;
 
 import com.bookify.CustomRenderComponent.RoundedBorder;
 import com.bookify.CustomRenderComponent.CustomTableHeader;
