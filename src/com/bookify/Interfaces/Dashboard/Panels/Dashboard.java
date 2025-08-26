@@ -1,4 +1,4 @@
-package com.bookify.Interfaces.panels.Dashboard;
+package com.bookify.Interfaces.Dashboard.Panels;
 
 import com.bookify.CustomRenderComponent.CustomTableHeader;
 import com.bookify.CustomRenderComponent.RoundedBorder;

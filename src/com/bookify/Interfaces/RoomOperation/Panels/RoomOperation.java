@@ -1,4 +1,4 @@
-package com.bookify.Interfaces.panels.RoomOperation;
+package com.bookify.Interfaces.RoomOperation.Panels;
 
 import com.bookify.CustomRenderComponent.CustomTableHeader;
 import com.bookify.CustomRenderComponent.RoundedBorder;

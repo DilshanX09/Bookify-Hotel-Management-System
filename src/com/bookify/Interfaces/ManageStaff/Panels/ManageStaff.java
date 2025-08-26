@@ -1,4 +1,4 @@
-package com.bookify.Interfaces.panels.ManageStaff;
+package com.bookify.Interfaces.ManageStaff.Panels;
 
 import com.bookify.CustomRenderComponent.CustomTableHeader;
 import com.bookify.CustomRenderComponent.RoundedBorder;
