@@ -67,6 +67,7 @@ public class Dashboard extends javax.swing.JPanel {
         jLabel17 = new javax.swing.JLabel();
         yearRevenueChart = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
@@ -384,21 +385,36 @@ public class Dashboard extends javax.swing.JPanel {
         jLabel24.setFont(new java.awt.Font("Inter 18pt Medium", 0, 16)); // NOI18N
         jLabel24.setText("Year Revenue");
 
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 704, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 303, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout yearRevenueChartLayout = new javax.swing.GroupLayout(yearRevenueChart);
         yearRevenueChart.setLayout(yearRevenueChartLayout);
         yearRevenueChartLayout.setHorizontalGroup(
             yearRevenueChartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(yearRevenueChartLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jLabel24)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(yearRevenueChartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel24))
+                .addGap(23, 23, 23))
         );
         yearRevenueChartLayout.setVerticalGroup(
             yearRevenueChartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(yearRevenueChartLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jLabel24)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(19, 19, 19))
         );
 
         jLabel25.setFont(new java.awt.Font("Inter 18pt", 1, 26)); // NOI18N
@@ -588,6 +604,7 @@ public class Dashboard extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPanel occupiedRoom;
