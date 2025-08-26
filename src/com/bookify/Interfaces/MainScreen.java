@@ -7,6 +7,7 @@ import com.bookify.Interfaces.Reservation.Panels.Reservation;
 import com.bookify.Interfaces.Dashboard.Panels.Dashboard;
 import com.bookify.Interfaces.ManageStaff.Panels.ManageStaff;
 import com.bookify.Interfaces.RoomOperation.Panels.RoomOperation;
+import com.bookify.Interfaces.RoomServiceNotification.Panels.RoomService;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
@@ -37,6 +38,7 @@ public class MainScreen extends javax.swing.JFrame {
     private ManageGuest manageGuest;
     private ManageStaff manageStaff;
     private RoomOperation roomOperation;
+    private RoomService roomService;
 
     public MainScreen() {
         initComponents();
@@ -55,12 +57,14 @@ public class MainScreen extends javax.swing.JFrame {
         this.manageGuest = new ManageGuest();
         this.manageStaff = new ManageStaff();
         this.roomOperation = new RoomOperation();
+        this.roomService = new RoomService();
 
         RoundedBorder.applyLineBorder(dashboard, 20);
         RoundedBorder.applyLineBorder(reservation, 20);
         RoundedBorder.applyLineBorder(manageGuest, 20);
         RoundedBorder.applyLineBorder(manageStaff, 20);
         RoundedBorder.applyLineBorder(roomOperation, 20);
+        RoundedBorder.applyLineBorder(roomService, 20);
 
         RoundedBorder.applyToPanel(mainPanel, 20, 1, Color.decode("#EDEDED"), Color.WHITE);
 
@@ -69,6 +73,7 @@ public class MainScreen extends javax.swing.JFrame {
         this.mainPanel.add(manageGuest, "manageGuest");
         this.mainPanel.add(manageStaff, "manageStaff");
         this.mainPanel.add(roomOperation, "roomOperation");
+        this.mainPanel.add(roomService, "roomService");
 
         SwingUtilities.updateComponentTreeUI(mainPanel);
     }
@@ -444,7 +449,7 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_analyticsBtnActionPerformed
 
     private void roomNotifiBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roomNotifiBtnActionPerformed
-        // TODO add your handling code here:
+        cardLayout.show(mainPanel, "roomService");
     }//GEN-LAST:event_roomNotifiBtnActionPerformed
 
     public static void main(String args[]) {
