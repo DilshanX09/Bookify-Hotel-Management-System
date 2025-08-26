@@ -7,12 +7,12 @@ import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
 
 public class ManageStaff extends javax.swing.JPanel {
-
+    
     public ManageStaff() {
         initComponents();
         init();
     }
-
+    
     private void init() {
         homeIcon.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Home.svg", homeIcon.getWidth(), homeIcon.getHeight()));
         RoundedBorder.applyLineBorder(totalStaff, 20);
@@ -26,7 +26,7 @@ public class ManageStaff extends javax.swing.JPanel {
         registerMemberBtn.putClientProperty(FlatClientProperties.STYLE, "arc:12");
         new CustomTableHeader(staffTabel.getTableHeader()).initHeader();
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -397,12 +397,7 @@ public class ManageStaff extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void registerMemberBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerMemberBtnActionPerformed
-
-        java.awt.Window parentWindow = javax.swing.SwingUtilities.getWindowAncestor(this);
-        RegisterStaffMember dialog = new RegisterStaffMember(this, (java.awt.Frame) parentWindow, true);
-        dialog.setLocationRelativeTo(parentWindow);
-        dialog.setVisible(true);
-        
+        RegisterStaffMember.getInstance().setVisible(true);
     }//GEN-LAST:event_registerMemberBtnActionPerformed
 
     private void searchFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchFieldFocusGained
