@@ -84,6 +84,9 @@ public class MainScreen extends javax.swing.JFrame {
         buttonsList.add(roomOperationBtn);
         buttonsList.add(manageStaffBtn);
         buttonsList.add(manageGuestsBtn);
+        buttonsList.add(BookingsBtn);
+        buttonsList.add(analyticsBtn);
+        buttonsList.add(roomNotifiBtn);
 
         for (JButton btn : buttonsList) {
             btn.setBackground(defaultColor);
@@ -138,11 +141,26 @@ public class MainScreen extends javax.swing.JFrame {
         manageGuestsBtn.setHorizontalAlignment(SwingConstants.LEFT);
         manageGuestsBtn.setIconTextGap(10);
         manageGuestsBtn.setHorizontalTextPosition(SwingConstants.RIGHT);
+
+        BookingsBtn.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Booking-Summery.svg", 25, 25));
+        BookingsBtn.setHorizontalAlignment(SwingConstants.LEFT);
+        BookingsBtn.setIconTextGap(10);
+        BookingsBtn.setHorizontalTextPosition(SwingConstants.RIGHT);
+
+        analyticsBtn.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Chart.svg", 25, 25));
+        analyticsBtn.setHorizontalAlignment(SwingConstants.LEFT);
+        analyticsBtn.setIconTextGap(10);
+        analyticsBtn.setHorizontalTextPosition(SwingConstants.RIGHT);
+
+        roomNotifiBtn.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Notification.svg", 25, 25));
+        roomNotifiBtn.setHorizontalAlignment(SwingConstants.LEFT);
+        roomNotifiBtn.setIconTextGap(10);
+        roomNotifiBtn.setHorizontalTextPosition(SwingConstants.RIGHT);
         // </editor-fold>
     }
 
     private void init() {
-        mainLogo.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Logo.svg", mainLogo.getWidth(), mainLogo.getHeight()));
+        mainLogo.setIcon(new FlatSVGIcon("com/bookify/Resources/Icons/Logo.svg", 43, 43));
     }
 
     @SuppressWarnings("unchecked")
@@ -159,8 +177,15 @@ public class MainScreen extends javax.swing.JFrame {
         roomOperationBtn = new javax.swing.JButton();
         manageStaffBtn = new javax.swing.JButton();
         manageGuestsBtn = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
         mainPanel = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        BookingsBtn = new javax.swing.JButton();
+        analyticsBtn = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        roomNotifiBtn = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -174,6 +199,7 @@ public class MainScreen extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Bookify System");
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -193,10 +219,11 @@ public class MainScreen extends javax.swing.JFrame {
             }
         });
 
-        mainLogo.setBackground(new java.awt.Color(255, 255, 255));
+        mainLogo.setBackground(new java.awt.Color(247, 247, 247));
+        mainLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mainLogo.setOpaque(true);
 
-        jLabel1.setFont(new java.awt.Font("Inter 24pt SemiBold", 1, 17)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Inter 18pt", 1, 19)); // NOI18N
         jLabel1.setText("Bookify");
 
         jLabel2.setFont(new java.awt.Font("Inter 18pt", 0, 13)); // NOI18N
@@ -251,12 +278,51 @@ public class MainScreen extends javax.swing.JFrame {
             }
         });
 
-        jScrollPane1.setBackground(new java.awt.Color(247, 247, 247));
-        jScrollPane1.setBorder(null);
-
-        mainPanel.setBackground(new java.awt.Color(255, 255, 255));
         mainPanel.setLayout(new java.awt.CardLayout());
-        jScrollPane1.setViewportView(mainPanel);
+
+        jLabel3.setFont(new java.awt.Font("Inter 18pt", 0, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(167, 165, 165));
+        jLabel3.setText("Summery");
+
+        BookingsBtn.setBackground(new java.awt.Color(247, 247, 247));
+        BookingsBtn.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
+        BookingsBtn.setText("Bookings");
+        BookingsBtn.setBorder(null);
+        BookingsBtn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        BookingsBtn.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        BookingsBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BookingsBtnActionPerformed(evt);
+            }
+        });
+
+        analyticsBtn.setBackground(new java.awt.Color(247, 247, 247));
+        analyticsBtn.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
+        analyticsBtn.setText("Analytics");
+        analyticsBtn.setBorder(null);
+        analyticsBtn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        analyticsBtn.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        analyticsBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                analyticsBtnActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Inter 18pt", 0, 13)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(167, 165, 165));
+        jLabel4.setText("Notification");
+
+        roomNotifiBtn.setBackground(new java.awt.Color(247, 247, 247));
+        roomNotifiBtn.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
+        roomNotifiBtn.setText("Room & Service");
+        roomNotifiBtn.setBorder(null);
+        roomNotifiBtn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        roomNotifiBtn.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        roomNotifiBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roomNotifiBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -274,15 +340,24 @@ public class MainScreen extends javax.swing.JFrame {
                         .addComponent(mainLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel1))
-                    .addComponent(jLabel2))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(BookingsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(analyticsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(roomNotifiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1105, Short.MAX_VALUE)
+                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1052, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel1)
                     .addComponent(mainLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -298,12 +373,28 @@ public class MainScreen extends javax.swing.JFrame {
                 .addComponent(manageStaffBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(manageGuestsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(440, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BookingsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(analyticsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addComponent(roomNotifiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(151, Short.MAX_VALUE))
         );
+
+        jMenu1.setText("File");
+        jMenu1.setFont(new java.awt.Font("Inter 18pt Medium", 0, 12)); // NOI18N
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenu2.setFont(new java.awt.Font("Inter 18pt Medium", 0, 12)); // NOI18N
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -344,23 +435,42 @@ public class MainScreen extends javax.swing.JFrame {
         cardLayout.show(mainPanel, "manageGuest");
     }//GEN-LAST:event_manageGuestsBtnActionPerformed
 
+    private void BookingsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BookingsBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BookingsBtnActionPerformed
+
+    private void analyticsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_analyticsBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_analyticsBtnActionPerformed
+
+    private void roomNotifiBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roomNotifiBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_roomNotifiBtnActionPerformed
+
     public static void main(String args[]) {
         FlatLightLaf.setup();
         java.awt.EventQueue.invokeLater(() -> new MainScreen().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BookingsBtn;
+    private javax.swing.JButton analyticsBtn;
     private javax.swing.JButton dashboardBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel mainLogo;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JButton manageGuestsBtn;
     private javax.swing.JButton manageStaffBtn;
     private java.awt.Panel panel1;
     private javax.swing.JButton reservationBtn;
+    private javax.swing.JButton roomNotifiBtn;
     private javax.swing.JButton roomOperationBtn;
     // End of variables declaration//GEN-END:variables
 }
