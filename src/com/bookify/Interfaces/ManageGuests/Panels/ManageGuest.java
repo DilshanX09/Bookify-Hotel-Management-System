@@ -1,4 +1,4 @@
-package com.bookify.Interfaces.Panels.ManageGuests;
+package com.bookify.Interfaces.ManageGuests.Panels;
 
 import com.bookify.CustomRenderComponent.CustomTableHeader;
 import com.bookify.CustomRenderComponent.RoundedBorder;
@@ -77,7 +77,7 @@ public class ManageGuest extends javax.swing.JPanel {
         totalGuests.setBackground(new java.awt.Color(255, 255, 255));
         totalGuests.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
-        jLabel4.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
         jLabel4.setText("Total Guests");
 
         jLabel5.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
@@ -129,7 +129,7 @@ public class ManageGuest extends javax.swing.JPanel {
         jLabel7.setText("<html>\nNumber of guests currently <br/>\n staying in the hotel.\n</html>");
         jLabel7.setToolTipText("");
 
-        jLabel8.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
         jLabel8.setText("Currently Check-ins");
 
         checkInLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
@@ -174,7 +174,7 @@ public class ManageGuest extends javax.swing.JPanel {
         jLabel10.setText("<html>\nGuests presently checked into their<br/>\nrooms.\n</html>");
         jLabel10.setToolTipText("");
 
-        jLabel11.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
         jLabel11.setText("Upcoming Check-outs");
 
         checkOutLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
@@ -188,7 +188,7 @@ public class ManageGuest extends javax.swing.JPanel {
             .addGroup(upcomingCheckoutsLayout.createSequentialGroup()
                 .addGap(11, 11, 11)
                 .addGroup(upcomingCheckoutsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
                     .addGroup(upcomingCheckoutsLayout.createSequentialGroup()
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -219,7 +219,7 @@ public class ManageGuest extends javax.swing.JPanel {
         jLabel13.setText("<html> Guests who departed the hotel<br/> today. </html>");
         jLabel13.setToolTipText("");
 
-        jLabel14.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
         jLabel14.setText("Check-out Today");
 
         checkOutTodayLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N

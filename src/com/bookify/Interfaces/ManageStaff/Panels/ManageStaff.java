@@ -1,7 +1,8 @@
-package com.bookify.Interfaces.panels.ManageStaff;
+package com.bookify.Interfaces.ManageStaff.Panels;
 
 import com.bookify.CustomRenderComponent.CustomTableHeader;
 import com.bookify.CustomRenderComponent.RoundedBorder;
+import com.bookify.Interfaces.ManageStaff.Dialogs.RegisterStaffMember;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
 
@@ -70,7 +71,7 @@ public class ManageStaff extends javax.swing.JPanel {
         totalStaff.setBackground(new java.awt.Color(255, 255, 255));
         totalStaff.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 237, 237)));
 
-        jLabel4.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
         jLabel4.setText("Total Staff");
 
         jLabel5.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
@@ -91,7 +92,7 @@ public class ManageStaff extends javax.swing.JPanel {
                 .addGroup(totalStaffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addGroup(totalStaffLayout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
                         .addGap(120, 120, 120)))
                 .addGap(18, 18, 18)
                 .addComponent(totalStaffLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -122,7 +123,7 @@ public class ManageStaff extends javax.swing.JPanel {
         jLabel7.setText("<html>\nStaff members currently marked as<br/>\nactive and available.\n</html>");
         jLabel7.setToolTipText("");
 
-        jLabel8.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
         jLabel8.setText("Active Staff");
 
         activeStaffLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
@@ -138,7 +139,7 @@ public class ManageStaff extends javax.swing.JPanel {
                 .addGroup(activeStaffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
                     .addGroup(activeStaffLayout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
                         .addGap(72, 72, 72)))
                 .addGap(18, 18, 18)
                 .addComponent(activeStaffLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -167,7 +168,7 @@ public class ManageStaff extends javax.swing.JPanel {
         jLabel10.setText("<html>\nStaff currently not reporting for<br/>\nduty due to approved leave.\n</html>");
         jLabel10.setToolTipText("");
 
-        jLabel11.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
         jLabel11.setText("On Leave");
 
         onLeaveLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
@@ -181,7 +182,7 @@ public class ManageStaff extends javax.swing.JPanel {
             .addGroup(onLeaveLayout.createSequentialGroup()
                 .addGap(11, 11, 11)
                 .addGroup(onLeaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
                     .addGroup(onLeaveLayout.createSequentialGroup()
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -212,7 +213,7 @@ public class ManageStaff extends javax.swing.JPanel {
         jLabel13.setText("<html>\nCleaners currently marked as on<br/>\nduty and available.. \n</html>");
         jLabel13.setToolTipText("");
 
-        jLabel14.setFont(new java.awt.Font("Inter 18pt", 0, 14)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
         jLabel14.setText("Cleaners On Duty");
 
         cleanersLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
@@ -397,6 +398,11 @@ public class ManageStaff extends javax.swing.JPanel {
 
     private void registerMemberBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerMemberBtnActionPerformed
 
+        java.awt.Window parentWindow = javax.swing.SwingUtilities.getWindowAncestor(this);
+        RegisterStaffMember dialog = new RegisterStaffMember(this, (java.awt.Frame) parentWindow, true);
+        dialog.setLocationRelativeTo(parentWindow);
+        dialog.setVisible(true);
+        
     }//GEN-LAST:event_registerMemberBtnActionPerformed
 
     private void searchFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchFieldFocusGained
