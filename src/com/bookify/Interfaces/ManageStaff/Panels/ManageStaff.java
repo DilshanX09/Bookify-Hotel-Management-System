@@ -398,11 +398,19 @@ public class ManageStaff extends javax.swing.JPanel {
 
     private void registerMemberBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerMemberBtnActionPerformed
 
-        java.awt.Window parentWindow = javax.swing.SwingUtilities.getWindowAncestor(this);
-        RegisterStaffMember dialog = new RegisterStaffMember(this, (java.awt.Frame) parentWindow, true);
-        dialog.setLocationRelativeTo(parentWindow);
-        dialog.setVisible(true);
-        
+        java.awt.Frame parentFrame = (java.awt.Frame) javax.swing.SwingUtilities.getWindowAncestor(this);
+
+        com.bookify.Interfaces.ManageStaff.Dialogs.RegisterStaffMember userDialog
+                = new com.bookify.Interfaces.ManageStaff.Dialogs.RegisterStaffMember(
+                        this, 
+                        parentFrame, 
+                        true);
+
+        userDialog.setLocationRelativeTo(this);
+
+        userDialog.setVisible(true);
+
+
     }//GEN-LAST:event_registerMemberBtnActionPerformed
 
     private void searchFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchFieldFocusGained
