@@ -43,10 +43,9 @@ public class SelectedDateBookings extends javax.swing.JFrame {
         this.selectedBookingID = new SelectedBookingID();
 
         this.mainLayout.add(bookingList, "bookingList");
-        this.mainLayout.add(selectedBookingID,"selectedBookingID");
+        this.mainLayout.add(selectedBookingID, "selectedBookingID");
 
-        this.cardLayout.show(mainLayout, "bookingList");
-        System.out.println("Showing booking list");
+        this.cardLayout.show(mainLayout, "selectedBookingID");
 
         SwingUtilities.updateComponentTreeUI(mainLayout);
 
@@ -59,6 +58,8 @@ public class SelectedDateBookings extends javax.swing.JFrame {
         mainLayout = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(620, 848));
+        setResizable(false);
 
         mainLayout.setBackground(new java.awt.Color(255, 255, 255));
         mainLayout.setLayout(new java.awt.CardLayout());
@@ -67,13 +68,11 @@ public class SelectedDateBookings extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainLayout, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(mainLayout, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(mainLayout, javax.swing.GroupLayout.PREFERRED_SIZE, 795, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(mainLayout, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
         );
 
         pack();
@@ -85,7 +84,7 @@ public class SelectedDateBookings extends javax.swing.JFrame {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SelectedDateBookings().setVisible(true);
+                SelectedDateBookings.getInstance().setVisible(true);
             }
         });
     }
