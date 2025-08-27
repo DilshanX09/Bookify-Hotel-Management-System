@@ -35,19 +35,19 @@ public class RoomService extends javax.swing.JPanel {
         totalRequestPanel = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        totalGuestLabel = new javax.swing.JLabel();
+        totalRequestLabel = new javax.swing.JLabel();
         maintainancePanel = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        checkInLabel = new javax.swing.JLabel();
+        maintainanceRequestLabel = new javax.swing.JLabel();
         checkInsPanel = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        checkOutLabel = new javax.swing.JLabel();
+        pendingCheckIns = new javax.swing.JLabel();
         checkoutTodayPanel = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        checkOutTodayLabel = new javax.swing.JLabel();
+        checkOutsTodayLabel = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
         reloadBtn = new javax.swing.JButton();
@@ -86,9 +86,9 @@ public class RoomService extends javax.swing.JPanel {
         jLabel5.setText("<html>  Cumulative count of all users<br/> currently registered to the system </html>");
         jLabel5.setToolTipText("");
 
-        totalGuestLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
-        totalGuestLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        totalGuestLabel.setText("30");
+        totalRequestLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
+        totalRequestLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        totalRequestLabel.setText("30");
 
         javax.swing.GroupLayout totalRequestPanelLayout = new javax.swing.GroupLayout(totalRequestPanel);
         totalRequestPanel.setLayout(totalRequestPanelLayout);
@@ -102,7 +102,7 @@ public class RoomService extends javax.swing.JPanel {
                         .addComponent(jLabel4)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
-                .addComponent(totalGuestLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(totalRequestLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
         totalRequestPanelLayout.setVerticalGroup(
@@ -111,11 +111,11 @@ public class RoomService extends javax.swing.JPanel {
                 .addGap(12, 12, 12)
                 .addComponent(jLabel4)
                 .addGap(5, 5, 5)
-                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, Short.MAX_VALUE)
                 .addGap(12, 12, 12))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, totalRequestPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(totalGuestLabel)
+                .addComponent(totalRequestLabel)
                 .addGap(24, 24, 24))
         );
 
@@ -132,9 +132,9 @@ public class RoomService extends javax.swing.JPanel {
         jLabel8.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
         jLabel8.setText("Maintainance Request");
 
-        checkInLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
-        checkInLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        checkInLabel.setText("30");
+        maintainanceRequestLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
+        maintainanceRequestLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        maintainanceRequestLabel.setText("30");
 
         javax.swing.GroupLayout maintainancePanelLayout = new javax.swing.GroupLayout(maintainancePanel);
         maintainancePanel.setLayout(maintainancePanelLayout);
@@ -148,7 +148,7 @@ public class RoomService extends javax.swing.JPanel {
                         .addComponent(jLabel8)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
-                .addComponent(checkInLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(maintainanceRequestLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
         maintainancePanelLayout.setVerticalGroup(
@@ -156,7 +156,7 @@ public class RoomService extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, maintainancePanelLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addGroup(maintainancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(checkInLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(maintainanceRequestLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, maintainancePanelLayout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -177,9 +177,9 @@ public class RoomService extends javax.swing.JPanel {
         jLabel11.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
         jLabel11.setText("Pending Check-Ins");
 
-        checkOutLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
-        checkOutLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        checkOutLabel.setText("30");
+        pendingCheckIns.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
+        pendingCheckIns.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pendingCheckIns.setText("30");
 
         javax.swing.GroupLayout checkInsPanelLayout = new javax.swing.GroupLayout(checkInsPanel);
         checkInsPanel.setLayout(checkInsPanelLayout);
@@ -193,7 +193,7 @@ public class RoomService extends javax.swing.JPanel {
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(checkOutLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pendingCheckIns, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
         checkInsPanelLayout.setVerticalGroup(
@@ -205,7 +205,7 @@ public class RoomService extends javax.swing.JPanel {
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(checkOutLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pendingCheckIns, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12))
         );
 
@@ -222,9 +222,9 @@ public class RoomService extends javax.swing.JPanel {
         jLabel14.setFont(new java.awt.Font("Inter 18pt Medium", 0, 14)); // NOI18N
         jLabel14.setText("Check-Outs Today");
 
-        checkOutTodayLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
-        checkOutTodayLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        checkOutTodayLabel.setText("30");
+        checkOutsTodayLabel.setFont(new java.awt.Font("Inter 18pt", 1, 35)); // NOI18N
+        checkOutsTodayLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        checkOutsTodayLabel.setText("30");
 
         javax.swing.GroupLayout checkoutTodayPanelLayout = new javax.swing.GroupLayout(checkoutTodayPanel);
         checkoutTodayPanel.setLayout(checkoutTodayPanelLayout);
@@ -239,7 +239,7 @@ public class RoomService extends javax.swing.JPanel {
                     .addGroup(checkoutTodayPanelLayout.createSequentialGroup()
                         .addComponent(jLabel13)
                         .addGap(26, 26, 26)))
-                .addComponent(checkOutTodayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(checkOutsTodayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
         checkoutTodayPanelLayout.setVerticalGroup(
@@ -247,7 +247,7 @@ public class RoomService extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, checkoutTodayPanelLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addGroup(checkoutTodayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(checkOutTodayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(checkOutsTodayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, checkoutTodayPanelLayout.createSequentialGroup()
                         .addComponent(jLabel14)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -275,6 +275,11 @@ public class RoomService extends javax.swing.JPanel {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 searchFieldFocusLost(evt);
+            }
+        });
+        searchField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                searchFieldMouseClicked(evt);
             }
         });
 
@@ -366,8 +371,8 @@ public class RoomService extends javax.swing.JPanel {
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(334, 334, 334)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(121, 121, 121)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(reloadBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -417,12 +422,14 @@ public class RoomService extends javax.swing.JPanel {
         searchField.setText("Search...");
     }//GEN-LAST:event_searchFieldFocusLost
 
+    private void searchFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchFieldMouseClicked
+       searchField.setText("");
+    }//GEN-LAST:event_searchFieldMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel checkInLabel;
     private javax.swing.JPanel checkInsPanel;
-    private javax.swing.JLabel checkOutLabel;
-    private javax.swing.JLabel checkOutTodayLabel;
+    private javax.swing.JLabel checkOutsTodayLabel;
     private javax.swing.JPanel checkoutTodayPanel;
     private javax.swing.JLabel homeIcon;
     private javax.swing.JComboBox<String> jComboBox1;
@@ -445,11 +452,13 @@ public class RoomService extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel maintainancePanel;
+    private javax.swing.JLabel maintainanceRequestLabel;
     private javax.swing.JTable notificationTable;
     private javax.swing.JPanel notificationTablePanel;
+    private javax.swing.JLabel pendingCheckIns;
     private javax.swing.JButton reloadBtn;
     private javax.swing.JTextField searchField;
-    private javax.swing.JLabel totalGuestLabel;
+    private javax.swing.JLabel totalRequestLabel;
     private javax.swing.JPanel totalRequestPanel;
     // End of variables declaration//GEN-END:variables
 }

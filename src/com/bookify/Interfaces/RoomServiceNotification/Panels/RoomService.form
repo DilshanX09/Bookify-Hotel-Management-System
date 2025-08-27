@@ -30,8 +30,8 @@
                       <Component id="jComboBox1" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Component id="jComboBox2" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="334" max="-2" attributes="0"/>
-                      <Component id="jPanel1" min="-2" pref="218" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
+                      <Component id="jPanel1" min="-2" pref="287" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="reloadBtn" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -145,7 +145,7 @@
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="totalGuestLabel" min="-2" pref="53" max="-2" attributes="0"/>
+                      <Component id="totalRequestLabel" min="-2" pref="53" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -161,7 +161,7 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="totalGuestLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="totalRequestLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -186,7 +186,7 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="totalGuestLabel">
+            <Component class="javax.swing.JLabel" name="totalRequestLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Inter 18pt" size="35" style="1"/>
@@ -224,7 +224,7 @@
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="checkInLabel" min="-2" pref="53" max="-2" attributes="0"/>
+                      <Component id="maintainanceRequestLabel" min="-2" pref="53" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -234,7 +234,7 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="checkInLabel" alignment="1" max="32767" attributes="0"/>
+                          <Component id="maintainanceRequestLabel" alignment="1" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -265,7 +265,7 @@
                 <Property name="text" type="java.lang.String" value="Maintainance Request"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="checkInLabel">
+            <Component class="javax.swing.JLabel" name="maintainanceRequestLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Inter 18pt" size="35" style="1"/>
@@ -303,7 +303,7 @@
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="checkOutLabel" min="-2" pref="54" max="-2" attributes="0"/>
+                      <Component id="pendingCheckIns" min="-2" pref="54" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -318,7 +318,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel10" min="-2" pref="45" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="checkOutLabel" alignment="1" min="-2" pref="63" max="-2" attributes="0"/>
+                          <Component id="pendingCheckIns" alignment="1" min="-2" pref="63" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   </Group>
@@ -344,7 +344,7 @@
                 <Property name="text" type="java.lang.String" value="Pending Check-Ins"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="checkOutLabel">
+            <Component class="javax.swing.JLabel" name="pendingCheckIns">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Inter 18pt" size="35" style="1"/>
@@ -384,7 +384,7 @@
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="checkOutTodayLabel" min="-2" pref="57" max="-2" attributes="0"/>
+                      <Component id="checkOutsTodayLabel" min="-2" pref="57" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -394,7 +394,7 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="checkOutTodayLabel" alignment="1" max="32767" attributes="0"/>
+                          <Component id="checkOutsTodayLabel" alignment="1" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -425,7 +425,7 @@
                 <Property name="text" type="java.lang.String" value="Check-Outs Today"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="checkOutTodayLabel">
+            <Component class="javax.swing.JLabel" name="checkOutsTodayLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Inter 18pt" size="35" style="1"/>
@@ -491,6 +491,7 @@
       <Events>
         <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="searchFieldFocusGained"/>
         <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="searchFieldFocusLost"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="searchFieldMouseClicked"/>
       </Events>
     </Component>
     <Container class="javax.swing.JPanel" name="notificationTablePanel">

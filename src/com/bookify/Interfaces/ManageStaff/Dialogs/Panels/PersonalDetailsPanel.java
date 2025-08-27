@@ -71,7 +71,7 @@ public class PersonalDetailsPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Inter 18pt", 1, 24)); // NOI18N
         jLabel4.setText("Register Staff Member");
 
         jLabel1.setFont(new java.awt.Font("Inter 18pt Medium", 0, 16)); // NOI18N
