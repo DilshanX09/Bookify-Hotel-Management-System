@@ -58,11 +58,6 @@ public class SelectedDateBookingList extends javax.swing.JPanel {
         jLabel1.setText("Selected Date Booking List");
 
         reloadBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        reloadBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                reloadBtnMouseClicked(evt);
-            }
-        });
         reloadBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reloadBtnActionPerformed(evt);
@@ -157,10 +152,6 @@ public class SelectedDateBookingList extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void reloadBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reloadBtnMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reloadBtnMouseClicked
 
     private void reloadBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reloadBtnActionPerformed
         // TODO add your handling code here:
