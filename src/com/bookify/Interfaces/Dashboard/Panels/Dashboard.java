@@ -1,15 +1,36 @@
 package com.bookify.Interfaces.Dashboard.Panels;
 
+import com.bookify.CustomRenderComponent.BarChartRender;
 import com.bookify.CustomRenderComponent.CustomTableHeader;
 import com.bookify.CustomRenderComponent.RoundedBorder;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
+import org.jfree.chart.ChartPanel;
+import org.jfree.data.category.DefaultCategoryDataset;
 
 public class Dashboard extends javax.swing.JPanel {
 
     public Dashboard() {
         initComponents();
         init();
+        initChart();
+    }
+
+    private void initChart() {
+        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+        String series = "Revenue (LKR)";
+        String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+
+        int i = 5;
+        for (String month : months) {
+            dataset.addValue(i++, series, month);
+        }
+
+        BarChartRender yearRevenue = new BarChartRender();
+//        ChartPanel yearRevenue = yearRevenue.initCharts("Monthly Revenue Report - 2025", "Month", "Revenue (LKR)", dataset);
+        ChartPanel initCharts = yearRevenue.initCharts("", "Month", "LKR", dataset);
+        revenuePanel.add(initCharts);
     }
 
     private void init() {
@@ -67,7 +88,7 @@ public class Dashboard extends javax.swing.JPanel {
         jLabel17 = new javax.swing.JLabel();
         yearRevenueChart = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        revenuePanel = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
@@ -385,16 +406,7 @@ public class Dashboard extends javax.swing.JPanel {
         jLabel24.setFont(new java.awt.Font("Inter 18pt Medium", 0, 16)); // NOI18N
         jLabel24.setText("Year Revenue");
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 704, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 303, Short.MAX_VALUE)
-        );
+        revenuePanel.setLayout(new java.awt.BorderLayout());
 
         javax.swing.GroupLayout yearRevenueChartLayout = new javax.swing.GroupLayout(yearRevenueChart);
         yearRevenueChart.setLayout(yearRevenueChartLayout);
@@ -403,7 +415,7 @@ public class Dashboard extends javax.swing.JPanel {
             .addGroup(yearRevenueChartLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(yearRevenueChartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(revenuePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel24))
                 .addGap(23, 23, 23))
         );
@@ -413,7 +425,7 @@ public class Dashboard extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel24)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(revenuePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(19, 19, 19))
         );
 
@@ -604,12 +616,12 @@ public class Dashboard extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPanel occupiedRoom;
     private javax.swing.JTable recentBookingTable;
     private javax.swing.JButton reloadBtn;
+    private javax.swing.JPanel revenuePanel;
     private javax.swing.JTextField searchField;
     private javax.swing.JPanel tablePanel;
     private javax.swing.JPanel totalBookings;
