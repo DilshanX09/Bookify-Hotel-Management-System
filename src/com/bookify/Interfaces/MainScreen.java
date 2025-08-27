@@ -2,6 +2,7 @@ package com.bookify.Interfaces;
 
 import com.bookify.Constant.ThemeColors;
 import com.bookify.CustomRenderComponent.RoundedBorder;
+import com.bookify.Interfaces.Calender.CalenderPanel;
 import com.bookify.Interfaces.ManageGuests.Panels.ManageGuest;
 import com.bookify.Interfaces.Reservation.Panels.Reservation;
 import com.bookify.Interfaces.Dashboard.Panels.Dashboard;
@@ -38,7 +39,9 @@ public class MainScreen extends javax.swing.JFrame {
     private ManageGuest manageGuest;
     private ManageStaff manageStaff;
     private RoomOperation roomOperation;
+    private CalenderPanel calenderPanel;
     private RoomService roomService;
+
 
     public MainScreen() {
         initComponents();
@@ -57,6 +60,7 @@ public class MainScreen extends javax.swing.JFrame {
         this.manageGuest = new ManageGuest();
         this.manageStaff = new ManageStaff();
         this.roomOperation = new RoomOperation();
+        this.calenderPanel = new CalenderPanel();
         this.roomService = new RoomService();
 
         RoundedBorder.applyLineBorder(dashboard, 20);
@@ -64,6 +68,7 @@ public class MainScreen extends javax.swing.JFrame {
         RoundedBorder.applyLineBorder(manageGuest, 20);
         RoundedBorder.applyLineBorder(manageStaff, 20);
         RoundedBorder.applyLineBorder(roomOperation, 20);
+        RoundedBorder.applyLineBorder(calenderPanel, 20);
         RoundedBorder.applyLineBorder(roomService, 20);
 
         RoundedBorder.applyToPanel(mainPanel, 20, 1, Color.decode("#EDEDED"), Color.WHITE);
@@ -73,7 +78,9 @@ public class MainScreen extends javax.swing.JFrame {
         this.mainPanel.add(manageGuest, "manageGuest");
         this.mainPanel.add(manageStaff, "manageStaff");
         this.mainPanel.add(roomOperation, "roomOperation");
+        this.mainPanel.add(calenderPanel, "calenderPanel");
         this.mainPanel.add(roomService, "roomService");
+
 
         SwingUtilities.updateComponentTreeUI(mainPanel);
     }
@@ -441,7 +448,7 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_manageGuestsBtnActionPerformed
 
     private void BookingsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BookingsBtnActionPerformed
-        // TODO add your handling code here:
+        cardLayout.show(mainPanel, "calenderPanel");
     }//GEN-LAST:event_BookingsBtnActionPerformed
 
     private void analyticsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_analyticsBtnActionPerformed
