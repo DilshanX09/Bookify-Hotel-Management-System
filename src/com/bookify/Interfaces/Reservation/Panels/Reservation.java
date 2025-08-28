@@ -2,6 +2,7 @@ package com.bookify.Interfaces.Reservation.Panels;
 
 import com.bookify.CustomRenderComponent.RoundedBorder;
 import com.bookify.CustomRenderComponent.CustomTableHeader;
+import com.bookify.Interfaces.Reservation.Dialogs.ReservationBooking;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
 
@@ -163,7 +164,7 @@ public final class Reservation extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(checkInLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
+                    .addComponent(checkInLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -273,6 +274,11 @@ public final class Reservation extends javax.swing.JPanel {
         ReserveBookingBtn.setText("Reserve Booking");
         ReserveBookingBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ReserveBookingBtn.setPreferredSize(new java.awt.Dimension(130, 41));
+        ReserveBookingBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReserveBookingBtnActionPerformed(evt);
+            }
+        });
 
         tablePanel.setBackground(new java.awt.Color(255, 255, 255));
         tablePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(247, 247, 247)));
@@ -400,6 +406,10 @@ public final class Reservation extends javax.swing.JPanel {
     private void searchFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchFieldFocusLost
         searchField.setText("Search...");
     }//GEN-LAST:event_searchFieldFocusLost
+
+    private void ReserveBookingBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReserveBookingBtnActionPerformed
+         ReservationBooking.getInstance().setVisible(true);
+    }//GEN-LAST:event_ReserveBookingBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

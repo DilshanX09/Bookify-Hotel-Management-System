@@ -250,7 +250,7 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="checkInLabel" pref="69" max="32767" attributes="0"/>
+                          <Component id="checkInLabel" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="jLabel8" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -477,6 +477,9 @@
           <Dimension value="[130, 41]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ReserveBookingBtnActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JPanel" name="tablePanel">
       <Properties>
