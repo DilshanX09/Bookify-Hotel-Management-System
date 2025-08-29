@@ -5,9 +5,10 @@
 package com.bookify.Interfaces.Reservation.Dialogs;
 
 import com.bookify.CustomRenderComponent.RoundedBorder;
-import com.bookify.Interfaces.ManageGuests.Panels.GuestDetailsPannel;
-import com.bookify.Interfaces.ManageGuests.Panels.PaymentConfirmationPannel;
-import com.bookify.Interfaces.ManageGuests.Panels.ReservationInformationPannel;
+import com.bookify.Interfaces.Reservation.Panels.GuestDetailsPannel;
+import com.bookify.Interfaces.Reservation.Panels.PaymentConfirmationPannel;
+import com.bookify.Interfaces.Reservation.Panels.ReservationInformationPannel;
+
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
 import java.awt.CardLayout;
