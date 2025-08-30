@@ -79,7 +79,6 @@ public class RegisterStaffMember extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel mainLayout;
     // End of variables declaration//GEN-END:variables
