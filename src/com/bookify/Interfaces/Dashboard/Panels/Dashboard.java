@@ -2,11 +2,13 @@ package com.bookify.Interfaces.Dashboard.Panels;
 
 import com.bookify.CustomRenderComponent.BarChartRender;
 import com.bookify.CustomRenderComponent.CustomTableHeader;
+import com.bookify.CustomRenderComponent.LineChartRender;
 import com.bookify.CustomRenderComponent.RoundedBorder;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
 import org.jfree.chart.ChartPanel;
 import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.data.xy.XYSeries;
 
 public class Dashboard extends javax.swing.JPanel {
 
@@ -17,20 +19,25 @@ public class Dashboard extends javax.swing.JPanel {
     }
 
     private void initChart() {
-        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-        String series = "Revenue (LKR)";
-        String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
-            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
-
-        int i = 5;
-        for (String month : months) {
-            dataset.addValue(i++, series, month);
-        }
-
-        BarChartRender yearRevenue = new BarChartRender();
-//        ChartPanel yearRevenue = yearRevenue.initCharts("Monthly Revenue Report - 2025", "Month", "Revenue (LKR)", dataset);
-        ChartPanel initCharts = yearRevenue.initCharts("", "Month", "LKR", dataset);
-        revenuePanel.add(initCharts);
+        XYSeries series = new XYSeries("Revenue");
+        series.add(1, 8000);
+        series.add(2, 12000);
+        series.add(3, 7000);
+        series.add(4, 5000);
+        series.add(5, 3000);
+        series.add(6, 15000);
+        series.add(7, 20000);
+        String[] months = {
+            "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+        };
+        LineChartRender lineChart = new LineChartRender();
+        lineChart.setxAxisTitle("Time");
+        lineChart.setyAxisTitle("Total Revenue");
+        lineChart.setSeries(series);
+        lineChart.setSymbolxAxisLabelName("Month");
+        lineChart.setxAxisDataArray(months);
+        revenuePanel.add(lineChart.createLineChartPanel());
     }
 
     private void init() {
@@ -425,8 +432,8 @@ public class Dashboard extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel24)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(revenuePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(19, 19, 19))
+                .addComponent(revenuePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel25.setFont(new java.awt.Font("Inter 18pt", 1, 26)); // NOI18N
