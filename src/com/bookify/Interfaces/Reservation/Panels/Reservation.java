@@ -2,6 +2,7 @@ package com.bookify.Interfaces.Reservation.Panels;
 
 import com.bookify.CustomRenderComponent.RoundedBorder;
 import com.bookify.CustomRenderComponent.CustomTableHeader;
+import com.bookify.Interfaces.Reservation.Dialogs.ReserveBooking;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
 
@@ -277,6 +278,11 @@ public final class Reservation extends javax.swing.JPanel {
         ReserveBookingBtn.setText("Reserve Booking");
         ReserveBookingBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ReserveBookingBtn.setPreferredSize(new java.awt.Dimension(130, 41));
+        ReserveBookingBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReserveBookingBtnActionPerformed(evt);
+            }
+        });
 
         tablePanel.setBackground(new java.awt.Color(255, 255, 255));
         tablePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(247, 247, 247)));
@@ -421,6 +427,10 @@ public final class Reservation extends javax.swing.JPanel {
     private void searchFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchFieldFocusLost
         searchField.setText("Search...");
     }//GEN-LAST:event_searchFieldFocusLost
+
+    private void ReserveBookingBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReserveBookingBtnActionPerformed
+        ReserveBooking.getInstance().setVisible(true);
+    }//GEN-LAST:event_ReserveBookingBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
