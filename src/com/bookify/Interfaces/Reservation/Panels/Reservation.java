@@ -2,7 +2,10 @@ package com.bookify.Interfaces.Reservation.Panels;
 
 import com.bookify.CustomRenderComponent.RoundedBorder;
 import com.bookify.CustomRenderComponent.CustomTableHeader;
-import com.bookify.Interfaces.Reservation.Dialogs.ReservationBooking;
+
+
+import com.bookify.Interfaces.Reservation.Dialogs.ReserveBooking;
+
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
 
@@ -429,7 +432,9 @@ public final class Reservation extends javax.swing.JPanel {
     }//GEN-LAST:event_searchFieldFocusLost
 
     private void ReserveBookingBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReserveBookingBtnActionPerformed
-         ReservationBooking.getInstance().setVisible(true);
+
+        ReserveBooking.getInstance().setVisible(true);
+
     }//GEN-LAST:event_ReserveBookingBtnActionPerformed
 
 
