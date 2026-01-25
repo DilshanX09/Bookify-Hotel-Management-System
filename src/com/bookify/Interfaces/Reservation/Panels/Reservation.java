@@ -3,7 +3,6 @@ package com.bookify.Interfaces.Reservation.Panels;
 import com.bookify.CustomRenderComponent.RoundedBorder;
 import com.bookify.CustomRenderComponent.CustomTableHeader;
 
-
 import com.bookify.Interfaces.Reservation.Dialogs.ReserveBooking;
 
 import com.formdev.flatlaf.FlatClientProperties;
