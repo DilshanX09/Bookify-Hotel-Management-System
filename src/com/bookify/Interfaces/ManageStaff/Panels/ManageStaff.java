@@ -392,7 +392,9 @@ public class ManageStaff extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void registerMemberBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerMemberBtnActionPerformed
+
         RegisterStaffMember.getInstance().setVisible(true);
+
     }//GEN-LAST:event_registerMemberBtnActionPerformed
 
     private void searchFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchFieldFocusGained
