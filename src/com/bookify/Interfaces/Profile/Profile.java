@@ -7,10 +7,9 @@ import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Color;
 
-public final class Profile extends javax.swing.JDialog {
+public final class Profile extends javax.swing.JFrame {
 
-    public Profile(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
+    public Profile() {
         initComponents();
         init();
     }
@@ -91,9 +90,11 @@ public final class Profile extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Profile");
-        setAlwaysOnTop(true);
         setBackground(new java.awt.Color(255, 255, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setFocusable(false);
+        setFocusableWindowState(false);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -540,12 +541,22 @@ public final class Profile extends javax.swing.JDialog {
         logOutButton.setText("Log out");
         logOutButton.setBorderPainted(false);
         logOutButton.setFocusPainted(false);
+        logOutButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logOutAction(evt);
+            }
+        });
 
         cancelButton.setBackground(new java.awt.Color(243, 243, 243));
         cancelButton.setFont(new java.awt.Font("Inter 18pt Medium", 0, 15)); // NOI18N
         cancelButton.setText("Cancel");
         cancelButton.setBorderPainted(false);
         cancelButton.setFocusPainted(false);
+        cancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelAction(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -656,16 +667,17 @@ public final class Profile extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void logOutAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logOutAction
+        new LogoutModel(this, true).setVisible(true);
+    }//GEN-LAST:event_logOutAction
+
+    private void cancelAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelAction
+        System.exit(0);
+    }//GEN-LAST:event_cancelAction
+
     public static void main(String args[]) {
         FlatLightLaf.setup();
-        Profile dialog = new Profile(new javax.swing.JFrame(), true);
-        dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-            @Override
-            public void windowClosing(java.awt.event.WindowEvent e) {
-                System.exit(0);
-            }
-        });
-        dialog.setVisible(true);
+        new Profile().setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
