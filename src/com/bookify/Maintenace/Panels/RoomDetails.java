@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.bookify.Mentenace.Panels;
+package com.bookify.Maintenace.Panels;
 
 import com.formdev.flatlaf.FlatLightLaf;
 
@@ -343,8 +343,6 @@ public class RoomDetails extends javax.swing.JFrame {
     private javax.swing.JLabel roomMaintananceLabel;
     private javax.swing.JTable roomOperationTable;
     private javax.swing.JTextField searchByRoomNumberInput;
-    private javax.swing.JTextField searchField;
-    private javax.swing.JTextField searchField1;
     private javax.swing.JButton serchBtn;
     private javax.swing.JLabel totalRoomsLabel;
     // End of variables declaration//GEN-END:variables

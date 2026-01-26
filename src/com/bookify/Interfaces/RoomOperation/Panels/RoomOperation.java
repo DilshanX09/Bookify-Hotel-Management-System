@@ -265,6 +265,11 @@ public class RoomOperation extends javax.swing.JPanel {
         roomRegisterBtn.setForeground(new java.awt.Color(255, 255, 255));
         roomRegisterBtn.setText("Register Room");
         roomRegisterBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        roomRegisterBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roomRegisterBtnActionPerformed(evt);
+            }
+        });
 
         jComboBox2.setFont(new java.awt.Font("Inter 18pt", 0, 12)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Payment Status" }));
@@ -391,6 +396,10 @@ public class RoomOperation extends javax.swing.JPanel {
     private void searchFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchFieldFocusLost
         searchField.setText("Search...");
     }//GEN-LAST:event_searchFieldFocusLost
+
+    private void roomRegisterBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roomRegisterBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_roomRegisterBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

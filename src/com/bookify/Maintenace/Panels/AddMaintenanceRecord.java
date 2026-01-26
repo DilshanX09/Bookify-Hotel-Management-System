@@ -1,5 +1,5 @@
 
-package com.bookify.Mentenace.Panels;
+package com.bookify.Maintenace.Panels;
 
 
 public class AddMaintenanceRecord extends javax.swing.JPanel {
