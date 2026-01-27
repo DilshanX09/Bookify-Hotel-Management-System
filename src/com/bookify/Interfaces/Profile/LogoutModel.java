@@ -1,7 +1,6 @@
 package com.bookify.Interfaces.Profile;
 
 import com.formdev.flatlaf.FlatClientProperties;
-import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -10,16 +9,16 @@ import java.awt.event.MouseEvent;
 import java.awt.geom.RoundRectangle2D;
 import javax.swing.JFrame;
 
-public class LogoutModel extends javax.swing.JFrame {
+public class LogoutModel extends javax.swing.JDialog {
 
     private Integer mouseX, mouseY;
 
-    public LogoutModel() {
-
+    public LogoutModel(JFrame parent, boolean model) {
+        super(parent, model);
         setUndecorated(true);
         setSize(365, 300);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), 30, 30));
         getContentPane().setBackground(new Color(0, 0, 0, 0));
@@ -62,7 +61,7 @@ public class LogoutModel extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         modelCloseButton = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
 
         jPanel1.setBackground(new java.awt.Color(248, 248, 248));
 
@@ -156,17 +155,12 @@ public class LogoutModel extends javax.swing.JFrame {
     }//GEN-LAST:event_confirmAction
 
     private void cancelAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelAction
-        System.exit(0);
+        dispose();
     }//GEN-LAST:event_cancelAction
 
     private void modelCloseAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modelCloseAction
-        System.exit(0);
+        dispose();
     }//GEN-LAST:event_modelCloseAction
-
-    public static void main(String args[]) {
-        FlatLightLaf.setup();
-        new LogoutModel().setVisible(true);
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelButton;
